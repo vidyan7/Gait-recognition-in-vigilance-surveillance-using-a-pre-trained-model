@@ -1,0 +1,14 @@
+
+mediapipe 
+opencv-python
+
+
+----------------------
+6 teq for similarity
+---------------------
+1.Cosine Similarity
+2.Dynamic Time Warping
+3. Pearson Correlation
+4. Manhattan Similarity
+5. Euclidean Similarity
+6. Feature-weighted similarity
