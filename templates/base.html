@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Mirrored from srbthemes.kcubeinfotech.com/mirbal/html/ltr/dashboard-restaurant.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 10 Oct 2025 17:02:49 GMT -->
+  <head>
+    <meta charset="utf-8" />
+    <title>SMART-GAIT</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <meta content="Bootstrap Admin & Dashboard Template" name="description" />
+    <meta content="SRBThemes" name="author" />
+
+    <!-- layout setup -->
+    <script type="module" src="../static/assets/js/layout-setup.js"></script>
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="../static/assets/images/favicon.png" />
+    <!-- Simplebar Css -->
+    <link
+      rel="stylesheet"
+      href="../static/assets/libs/simplebar/simplebar.min.css"
+    />
+
+    <!-- Swiper Css -->
+    <link
+      href="../static/assets/libs/swiper/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Nouislider Css -->
+    <link
+      href="../static/assets/libs/nouislider/nouislider.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Css -->
+    <link
+      href="../static/assets/css/bootstrap.min.css"
+      id="bootstrap-style"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!--icons css-->
+    <link
+      href="../static/assets/css/icons.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- App Css-->
+    <link
+      href="../static/assets/css/app.min.css"
+      id="app-style"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+
+  <body>
+    <!-- begin::App -->
+    <div id="layout-wrapper">
+      <!-- Begin Header -->
+      <header class="app-header" id="appHeader">
+        <div class="container-fluid w-100 px-0 px-md-2">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="d-inline-flex align-items-center gap-2">
+              <a
+                href="/"
+                class="align-items-center logo-main d-none me-5 gap-2"
+              >
+                <img
+                  height="33"
+                  width="33"
+                  class="logo-dark"
+                  alt="Dark Logo"
+                  src="../static/assets/images/logo-md.png"
+                />
+                <h3 class="text-white text-opacity-80 mb-0 lh-base fw-semibold">
+                  SMart-Gait
+                </h3>
+              </a>
+              <button
+                type="button"
+                class="vertical-toggle btn text-muted rounded-circle icon-btn"
+                id="toggleSidebar"
+                aria-label="Toggle Sidebar"
+              >
+                <i class="ri-menu-2-line fs-4 toggle-left-arrow"></i>
+                <i class="ri-close-line fs-4 toggle-right-arrow d-none"></i>
+              </button>
+              <button
+                type="button"
+                class="horizontal-toggle btn text-muted rounded-circle icon-btn header-btn d-none header-menu-btn"
+                id="toggleHorizontal"
+                aria-label="Toggle Menu"
+              >
+                <i class="ri-menu-2-line fs-5 lh-sm"></i>
+              </button>
+            </div>
+            <div class="flex-shrink-0 d-flex align-items-center gap-1 gap-md-3">
+              <div id="toggleMode">
+                <button
+                  id="theme-toggle"
+                  class="btn icon-btn theme-toggle"
+                  title="Toggles light & dark theme"
+                  aria-label="Switch to dark theme"
+                  aria-live="polite"
+                  type="button"
+                >
+                  <svg
+                    class="sun-and-moon"
+                    aria-hidden="true"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <mask class="moon" id="moon-mask">
+                      <rect
+                        x="0"
+                        y="0"
+                        width="100%"
+                        height="100%"
+                        fill="white"
+                      />
+                      <circle cx="24" cy="10" r="6" fill="black" />
+                    </mask>
+                    <circle
+                      class="sun"
+                      cx="12"
+                      cy="12"
+                      r="6"
+                      mask="url(#moon-mask)"
+                      fill="currentColor"
+                    />
+                    <g class="sun-beams" stroke="currentColor">
+                      <line x1="12" y1="1" x2="12" y2="3" />
+                      <line x1="12" y1="21" x2="12" y2="23" />
+                      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                      <line x1="1" y1="12" x2="3" y2="12" />
+                      <line x1="21" y1="12" x2="23" y2="12" />
+                      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </g>
+                  </svg>
+                </button>
+              </div>
+              <div class="dropdown pe-dropdown-mega">
+                <button
+                  class="btn p-0 gap-2 text-start d-flex align-items-center"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span class="text-end mt-2 d-none d-md-block">
+                    <span class="user-name d-block lh-1 fs-14">Admin</span>
+                    <span class="text-muted fw-normal fs-13"
+                      >Administrator</span
+                    >
+                  </span>
+                  <span
+                    class="story-ring h-40px w-40px rounded-circle d-flex justify-content-center align-items-center"
+                  >
+                    <img
+                      src="../static/assets/images/avatar/avatar-16.jpg"
+                      alt="Avatar"
+                      class="h-36px w-36px rounded-circle user-img"
+                    />
+                  </span>
+                </button>
+                <div
+                  class="dropdown-menu dropdown-mega-xs dropdown-menu-end header-dropdown-menu shadow-sm border"
+                >
+                  <div
+                    class="d-flex gap-4 align-items-center justify-content-between mb-2 py-2 px-4 border rounded-2"
+                  >
+                    <div>
+                      <h6 class="mb-1 fs-14">Admin</h6>
+                      <small class="text-muted mb-0">admin@gmail.com</small>
+                    </div>
+                    <div
+                      class="story-ring h-44px w-44px rounded-circle d-flex justify-content-center align-items-center"
+                    >
+                      <img
+                        src="../static/assets/images/avatar/avatar-16.jpg"
+                        alt="Avatar"
+                        class="h-40px w-40px rounded-circle"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <ul class="list-unstyled mb-0">
+                      <li class="/admin/logout">
+                        <a href="auth-signout.html" class="text-danger">
+                          <i class="ri-logout-box-r-line me-3"></i>Sign out
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- END Header -->
+
+      <div class="header-wrapper"></div>
+
+      <!-- Search Modal -->
+      <div
+        class="modal fade search-modal"
+        id="searchModal"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="searchModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header d-block">
+              <div class="form-icon">
+                <input
+                  type="text"
+                  class="form-control form-control-icon"
+                  id="searchInputInModal"
+                  placeholder="Search"
+                  required
+                />
+                <div class="header-search-btn w-44px">
+                  <i class="ri-search-line text-muted fs-16"></i>
+                </div>
+                <button
+                  type="button"
+                  class="btn-close position-absolute end-0 top-50 translate-middle-y d-inline-block m-0"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+            </div>
+            <div class="modal-body" data-simplebar id="list-items">
+              <ul class="list-unstyled mb-0" id="searchList"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <aside class="pe-app-sidebar">
+        <div
+          class="pe-app-sidebar-logo px-5 d-flex align-items-center position-relative"
+        >
+          <!--begin::Brand Image-->
+          <a href="/" class="d-flex gap-2 logo-main">
+            <img
+              height="33"
+              width="33"
+              class="logo-dark"
+              alt="Dark Logo"
+              src="../static/assets/images/logo-md.png"
+            />
+            <h3 class="text-white text-opacity-80 mb-0 lh-base fw-semibold">
+              SMart-Gait
+            </h3>
+          </a>
+          <button
+            type="button"
+            id="sidebarDefaultArrow"
+            class="btn btn-sm p-0 fs-4 ms-auto float-end d-none icon-hover-btn text-white text-opacity-60 d-none"
+          >
+            <i class="ri-arrow-right-double-line"></i>
+          </button>
+          <!--end::Brand Image-->
+        </div>
+        <nav class="pe-app-sidebar-menu nav nav-pills">
+          <div class="d-flex align-items-start flex-column w-100">
+            <ul class="pe-main-menu list-unstyled">
+              <!-- Main Menu -->
+              <li class="pe-menu-title">Main</li>
+              <li class="pe-slide pe-has-sub">
+                <a href="/" class="pe-nav-link">
+                  <i class="uil uil-tachometer-fast-alt pe-nav-icon"></i>
+                  <span class="pe-nav-content">Dashboards</span>
+                </a>
+              </li>
+
+              <li class="pe-slide pe-has-sub">
+                <a href="/admin/profiles" class="pe-nav-link">
+                  <i class="uil uil-user-square pe-nav-icon"></i>
+                  <span class="pe-nav-content">Gait Profiles</span>
+                </a>
+              </li>
+
+              <li class="pe-slide pe-has-sub">
+                <a href="/admin/compare" class="pe-nav-link">
+                  <i class="ri-pages-line pe-nav-icon"></i>
+                  <span class="pe-nav-content">Compare Profiles</span>
+                </a>
+              </li>
+
+              <li class="pe-slide pe-has-sub">
+                <a href="/admin/identify" class="pe-nav-link">
+                  <i class="ri-user-search-line pe-nav-icon"></i>
+                  <span class="pe-nav-content">Identify Profiles</span>
+                </a>
+              </li>
+              
+
+
+{#
+              <li class="pe-slide pe-has-sub">
+                <a href="/admin/realtime" class="pe-nav-link">
+                  <i class="uil uil-layers pe-nav-icon"></i>
+                  <span class="pe-nav-content">Real-Time Gait Recognition</span>
+                </a>
+              </li>#}
+
+              <li class="pe-slide pe-has-sub">
+                <a href="/admin/logout" class="pe-nav-link">
+                  <i class="uil uil-sign-out-alt pe-nav-icon"></i>
+                  <span class="pe-nav-content">Log Out</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </aside>
+
+      {% block body %}{% endblock body %}
+
+      <button
+        class="btn btn-light-primary rounded-end-0 d-none d-md-inline-flex position-fixed end-0 switcher-btn"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasRight"
+        aria-controls="offcanvasRight"
+        aria-label="Settings"
+      >
+        <i class="ri-settings-3-line fs-19 lh-1 rotate-animation"></i
+        ><span class="fs-16 lh-1">Customize</span>
+      </button>
+      <div
+        class="offcanvas offcanvas-end border-0 data-theme-colors layout-customizer"
+        tabindex="-1"
+        id="offcanvasRight"
+        aria-labelledby="offcanvasRightLabel"
+      >
+        <div class="flex-wrap align-items-center p-5 offcanvas-header">
+          <h6 class="m-0" id="offcanvasRightLabel">Theme Customization</h6>
+          <button
+            type="button"
+            class="btn-close ms-auto"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <div data-simplebar class="h-100 px-5 mx-n5">
+            <h6 class="mb-5 fw-semibold">Layout:</h6>
+            <div class="row gy-3">
+              <div class="col-6">
+                <div class="border overflow-hidden rounded-2">
+                  <input
+                    id="customizer-layout01"
+                    name="data-layout"
+                    type="radio"
+                    value="vertical"
+                    class="form-check-input"
+                    checked
+                  />
+                  <label
+                    class="form-check-label p-0 avatar-3xl w-100 rounded-2"
+                    for="customizer-layout01"
+                  >
+                    <img
+                      src="../static/assets/images/switcher/vertical.png"
+                      alt="Vertical"
+                      class="img-fluid"
+                    />
+                  </label>
+                </div>
+                <h5 class="small mt-2 px-2">Vertical</h5>
+              </div>
+              <div class="col-6">
+                <div class="border overflow-hidden rounded-2">
+                  <input
+                    id="customizer-layout02"
+                    name="data-layout"
+                    type="radio"
+                    value="horizontal"
+                    class="form-check-input"
+                  />
+                  <label
+                    class="form-check-label p-0 avatar-3xl w-100 rounded-2"
+                    for="customizer-layout02"
+                  >
+                    <img
+                      src="../static/assets/images/switcher/horizontal.png"
+                      alt="Horizontal"
+                      class="img-fluid"
+                    />
+                  </label>
+                </div>
+                <h5 class="small mt-2 px-2">Horizontal</h5>
+              </div>
+              <div class="col-6">
+                <div class="border overflow-hidden rounded-2">
+                  <input
+                    id="customizer-layout03"
+                    name="data-layout"
+                    type="radio"
+                    value="semibox"
+                    class="form-check-input"
+                  />
+                  <label
+                    class="form-check-label p-0 avatar-3xl w-100 rounded-2"
+                    for="customizer-layout03"
+                  >
+                    <img
+                      src="../static/assets/images/switcher/semibox.png"
+                      alt="Semi Box"
+                      class="img-fluid"
+                    />
+                  </label>
+                </div>
+                <h5 class="small mt-2 px-2">Semi Box</h5>
+              </div>
+              <!-- end col -->
+            </div>
+
+            <h6 class="my-5 fw-semibold">Content Width:</h6>
+
+            <div class="row gy-3">
+              <div class="col-6">
+                <div class="border overflow-hidden rounded-2">
+                  <input
+                    id="defaultContent"
+                    name="data-content-width"
+                    type="radio"
+                    value="default"
+                    class="form-check-input"
+                    checked
+                  />
+                  <label
+                    class="form-check-label p-0 avatar-3xl w-100 rounded-2"
+                    for="defaultContent"
+                  >
+                    <img
+                      src="../static/assets/images/switcher/vertical.png"
+                      alt="Vertical"
+                      class="img-fluid"
+                    />
+                  </label>
+                </div>
+                <h5 class="small mt-2 px-2">Default</h5>
+              </div>
+              <div class="col-6">
+                <div class="border overflow-hidden rounded-2">
+                  <input
+                    id="boxLayout"
+                    name="data-content-width"
+                    type="radio"
+                    value="box"
+                    class="form-check-input"
+                  />
+                  <label
+                    class="form-check-label p-0 avatar-3xl w-100 rounded-2"
+                    for="boxLayout"
+                  >
+                    <img
+                      src="../static/assets/images/switcher/box.png"
+                      alt="Box"
+                      class="img-fluid"
+                    />
+                  </label>
+                </div>
+                <h5 class="small mt-2 px-2">Box</h5>
+              </div>
+              <!-- end col -->
+            </div>
+
+            <h6 class="my-5 fw-semibold">Layout Direction:</h6>
+
+            <div class="row gy-3">
+              <div class="col-6">
+                <div class="border overflow-hidden rounded-2">
+                  <input
+                    id="ltrMode"
+                    name="dir"
+                    type="radio"
+                    value="ltr"
+                    class="form-check-input"
+                    checked
+                  />
+                  <label
+                    class="form-check-label p-0 avatar-3xl w-100 rounded-2"
+                    for="ltrMode"
+                  >
+                    <img
+                      src="../static/assets/images/switcher/ltr.png"
+                      alt="LTR"
+                      class="img-fluid"
+                    />
+                  </label>
+                </div>
+                <h5 class="small mt-2 px-2">LTR</h5>
+              </div>
+              <div class="col-6">
+                <div class="border overflow-hidden rounded-2">
+                  <input
+                    id="rtlMode"
+                    name="dir"
+                    type="radio"
+                    value="rtl"
+                    class="form-check-input"
+                  />
+                  <label
+                    class="form-check-label p-0 avatar-3xl w-100 rounded-2"
+                    for="rtlMode"
+                  >
+                    <img
+                      src="../static/assets/images/switcher/rtl.png"
+                      alt="RTL"
+                      class="img-fluid"
+                    />
+                  </label>
+                </div>
+                <h5 class="small mt-2 px-2">RTL</h5>
+              </div>
+              <!-- end col -->
+            </div>
+
+            <h6 class="my-5 fw-semibold">Layout Mode:</h6>
+
+            <div class="row gy-3">
+              <div class="col-6">
+                <div>
+                  <input
+                    id="layout-light"
+                    name="data-bs-theme"
+                    type="radio"
+                    value="light"
+                    class="form-check-input"
+                    checked
+                  />
+                  <label
+                    class="form-check-label p-0 avatar-3xl w-100 rounded-2"
+                    for="layout-light"
+                  >
+                    <img
+                      src="../static/assets/images/switcher/light.png"
+                      alt="Light"
+                      class="img-fluid"
+                    />
+                  </label>
+                </div>
+                <h5 class="small mt-2 px-2">Light</h5>
+              </div>
+              <div class="col-6">
+                <div class="border overflow-hidden rounded-2">
+                  <input
+                    id="layout-dark"
+                    name="data-bs-theme"
+                    type="radio"
+                    value="dark"
+                    class="form-check-input"
+                  />
+                  <label
+                    class="form-check-label p-0 avatar-3xl w-100 rounded-2 bg-dark"
+                    for="layout-dark"
+                  >
+                    <img
+                      src="../static/assets/images/switcher/dark.png"
+                      alt="Dark"
+                      class="img-fluid"
+                    />
+                  </label>
+                </div>
+                <h5 class="small mt-2 px-2">Dark</h5>
+              </div>
+              <div class="col-6">
+                <div class="border overflow-hidden rounded-2">
+                  <input
+                    id="automode"
+                    name="data-bs-theme"
+                    type="radio"
+                    value="auto"
+                    class="form-check-input"
+                  />
+                  <label
+                    class="form-check-label p-0 avatar-3xl w-100 rounded-2"
+                    for="automode"
+                  >
+                    <img
+                      src="../static/assets/images/switcher/system.png"
+                      alt="System"
+                      class="img-fluid"
+                    />
+                  </label>
+                </div>
+                <h5 class="small mt-2 px-2">System</h5>
+              </div>
+              <!-- end col -->
+            </div>
+
+            <h6 class="my-5 fw-semibold">Sidebar Size:</h6>
+
+            <div class="row gy-3">
+              <div class="col-6">
+                <div class="border overflow-hidden rounded-2">
+                  <input
+                    id="sidebar-default"
+                    name="data-sidebar"
+                    type="radio"
+                    value="default"
+                    class="form-check-input"
+                    checked
+                  />
+                  <label
+                    class="form-check-label p-0 avatar-3xl w-100 rounded-2"
+                    for="sidebar-default"
+                  >
+                    <img
+                      src="../static/assets/images/switcher/vertical.png"
+                      alt="Vertical"
+                      class="img-fluid"
+                    />
+                  </label>
+                </div>
+                <h5 class="small mt-2 px-2">Default</h5>
+              </div>
+              <div class="col-6">
+                <div class="border overflow-hidden rounded-2">
+                  <input
+                    id="sidebar-medium"
+                    name="data-sidebar"
+                    type="radio"
+                    value="medium"
+                    class="form-check-input"
+                    checked
+                  />
+                  <label
+                    class="form-check-label p-0 avatar-3xl w-100 rounded-2"
+                    for="sidebar-medium"
+                  >
+                    <img
+                      src="../static/assets/images/switcher/medium.png"
+                      alt="Medium"
+                      class="img-fluid"
+                    />
+                  </label>
+                </div>
+                <h5 class="small mt-2 px-2">Medium</h5>
+              </div>
+              <div class="col-6">
+                <div class="border overflow-hidden rounded-2">
+                  <input
+                    id="sidebar-icon"
+                    name="data-sidebar"
+                    type="radio"
+                    value="icon"
+                    class="form-check-input"
+                  />
+                  <label
+                    class="form-check-label p-0 avatar-3xl w-100 rounded-2"
+                    for="sidebar-icon"
+                  >
+                    <img
+                      src="../static/assets/images/switcher/icon.png"
+                      alt="Icon"
+                      class="img-fluid"
+                    />
+                  </label>
+                </div>
+                <h5 class="small mt-2 px-2">Icon</h5>
+              </div>
+              <div class="col-6">
+                <div class="border overflow-hidden rounded-2">
+                  <input
+                    id="sidebar-icon-hover"
+                    name="data-sidebar"
+                    type="radio"
+                    value="icon-hover"
+                    class="form-check-input"
+                  />
+                  <label
+                    class="form-check-label p-0 avatar-3xl w-100 rounded-2"
+                    for="sidebar-icon-hover"
+                  >
+                    <img
+                      src="../static/assets/images/switcher/icon-hover.png"
+                      alt="Icon Hover"
+                      class="img-fluid"
+                    />
+                  </label>
+                </div>
+                <h5 class="small mt-2 px-2">Icon hover</h5>
+              </div>
+              <!-- end col -->
+            </div>
+
+            <div id="sidebar-color" class="mb-4 sidebar-color-theme">
+              <h6 class="mb-0 mt-5 fw-semibold">Sidebar Color</h6>
+              <p class="text-muted mb-2">Choose a sidebar background color.</p>
+              <div class="d-flex flex-wrap main-sidebar-color gap-2">
+                <div class="form-check sidebar-setting card-radio">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="data-sidebar-color"
+                    id="sidebarColorLight"
+                    value="light"
+                  />
+                  <label
+                    class="form-check-label rounded-3"
+                    for="sidebarColorLight"
+                  ></label>
+                </div>
+                <div class="form-check sidebar-setting card-radio">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="data-sidebar-color"
+                    id="sidebarColorMidnight"
+                    value="dark"
+                  />
+                  <label
+                    class="form-check-label rounded-3"
+                    for="sidebarColorMidnight"
+                  ></label>
+                </div>
+                <div class="form-check sidebar-setting card-radio">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="data-sidebar-color"
+                    id="sidebarColorDark"
+                    value="rosewood"
+                  />
+                  <label
+                    class="form-check-label rounded-3"
+                    for="sidebarColorDark"
+                  ></label>
+                </div>
+                <div class="form-check sidebar-setting card-radio">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="data-sidebar-color"
+                    id="sidebarColorAqua"
+                    value="indigo"
+                  />
+                  <label
+                    class="form-check-label rounded-3"
+                    for="sidebarColorAqua"
+                  ></label>
+                </div>
+              </div>
+            </div>
+            <div id="sidebar-color" class="my-5">
+              <h6 class="mb-0 mt-5 fw-semibold">Primary Color</h6>
+              <p class="text-muted mb-2">Choose a color of Primary.</p>
+              <div class="d-flex flex-wrap main-sidebar-color gap-2">
+                <div class="form-check sidebar-setting card-radio">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="data-theme-colors"
+                    id="themeColor-01"
+                    value="default"
+                    checked
+                  />
+                  <label
+                    class="form-check-label rounded-3"
+                    for="themeColor-01"
+                  ></label>
+                </div>
+                <div class="form-check sidebar-setting card-radio">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="data-theme-colors"
+                    id="themeColor-03"
+                    value="skyblue"
+                  />
+                  <label
+                    class="form-check-label rounded-3"
+                    for="themeColor-03"
+                  ></label>
+                </div>
+                <div class="form-check sidebar-setting card-radio">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="data-theme-colors"
+                    id="themeColor-02"
+                    value="orange"
+                  />
+                  <label
+                    class="form-check-label rounded-3"
+                    for="themeColor-02"
+                  ></label>
+                </div>
+                <div class="form-check sidebar-setting card-radio">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="data-theme-colors"
+                    id="themeColor-04"
+                    value="purple"
+                  />
+                  <label
+                    class="form-check-label rounded-3"
+                    for="themeColor-04"
+                  ></label>
+                </div>
+                <div class="form-check sidebar-setting card-radio">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="data-theme-colors"
+                    id="themeColor-05"
+                    value="green"
+                  />
+                  <label
+                    class="form-check-label rounded-3"
+                    for="themeColor-05"
+                  ></label>
+                </div>
+                <div class="form-check sidebar-setting card-radio">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="data-theme-colors"
+                    id="themeColor-06"
+                    value="pink"
+                  />
+                  <label
+                    class="form-check-label rounded-3"
+                    for="themeColor-06"
+                  ></label>
+                </div>
+                <div class="form-check sidebar-setting card-radio">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="data-theme-colors"
+                    id="themeColor-07"
+                    value="teal"
+                  />
+                  <label
+                    class="form-check-label rounded-3"
+                    for="themeColor-07"
+                  ></label>
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex items-center justify-end gap-2 modal-footer pt-6 border-top"
+            >
+              <button type="button" class="btn btn-light" id="resetBtn">
+                <i class="ri-reset-right-line me-1"></i> Reset
+              </button>
+              <button type="button" class="btn btn-primary">
+                <i class="ri-shopping-bag-3-line me-1"></i> Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Begin scroll top -->
+      <div
+        class="progress-wrap d-flex align-items-center justify-content-center cursor-pointer h-40px w-40px position-fixed"
+        id="progress-scroll"
+      >
+        <svg
+          class="progress-circle w-100 h-100 position-absolute"
+          viewBox="0 0 100 100"
+        >
+          <circle cx="50" cy="50" r="45" class="progress" />
+        </svg>
+        <i
+          class="ri-arrow-up-line fs-16 z-1 position-relative text-primary"
+        ></i>
+      </div>
+      <!-- END scroll top -->
+      <!-- Begin Footer -->
+      <footer class="footer">
+        <div class="container-fluid">
+          <div class="d-flex justify-content-between align-items-center gap-2">
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            © SMart-Gait.
+            <div class="text-sm-end d-none d-sm-block">
+              Design & Develop by Team MUK
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- END Footer -->
+    </div>
+    <!-- End Begin page -->
+
+    <!-- Swiper bundle js -->
+    <script src="../static/assets/libs/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Bootstrap bundle js -->
+    <script src="../static/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- simplebar js -->
+    <script src="../static/assets/libs/simplebar/simplebar.min.js"></script>
+
+    <!-- Scroll Top init -->
+    <script src="../static/assets/js/scroll-top.init.js"></script>
+    <!-- apexcharts -->
+    <script src="../static/assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- restaurant init -->
+    <script src="../static/assets/js/dashboard/restaurant.init.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- App js -->
+    <script src="../static/assets/js/app.js"></script>
+  </body>
+
+  <!-- Mirrored from srbthemes.kcubeinfotech.com/mirbal/html/ltr/dashboard-restaurant.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 10 Oct 2025 17:02:54 GMT -->
+</html>

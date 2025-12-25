@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Identify Person from Video</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    .error {
+      color: red;
+    }
+    .result {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Identify Person from Video</h2>
+  <form id="identifyForm">
+    <input type="file" id="videoInput" accept="video/*" required />
+    <button type="submit">Identify</button>
+  </form>
+
+  <p class="error" id="errorMsg"></p>
+
+  <div class="result" id="resultDiv" style="display: none;">
+    <h3>Match Found:</h3>
+    <p><strong>Name:</strong> <span id="name"></span></p>
+    <p><strong>Age:</strong> <span id="age"></span></p>
+    <p><strong>Gender:</strong> <span id="gender"></span></p>
+    <p><strong>Role:</strong> <span id="role"></span></p>
+    <p><strong>Confidence Score:</strong> <span id="confidence"></span>%</p>
+    <p><strong>Similarity:</strong> <span id="similarity"></span></p>
+  </div>
+
+  <script>
+    const form = document.getElementById('identifyForm');
+    const videoInput = document.getElementById('videoInput');
+    const errorMsg = document.getElementById('errorMsg');
+    const resultDiv = document.getElementById('resultDiv');
+    const nameSpan = document.getElementById('name');
+    const ageSpan = document.getElementById('age');
+    const genderSpan = document.getElementById('gender');
+    const roleSpan = document.getElementById('role');
+    const confidenceSpan = document.getElementById('confidence');
+    const similaritySpan = document.getElementById('similarity');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      errorMsg.textContent = '';
+      resultDiv.style.display = 'none';
+
+      if (!videoInput.files.length) {
+        errorMsg.textContent = 'Please select a video file.';
+        return;
+      }
+
+      const file = videoInput.files[0];
+      const formData = new FormData();
+      formData.append('video', file);
+
+      try {
+        const response = await fetch('/identify', {
+          method: 'POST',
+          body: formData
+        });
+
+        if (!response.ok) {
+          const errorData = await response.json();
+          throw new Error(errorData.error || 'Failed to identify person');
+        }
+
+        const data = await response.json();
+        nameSpan.textContent = data.name;
+        ageSpan.textContent = data.age;
+        genderSpan.textContent = data.gender;
+        roleSpan.textContent = data.role;
+        confidenceSpan.textContent = (data.confidence * 100).toFixed(2);
+        similaritySpan.textContent = data.similarity.toFixed(4);
+        resultDiv.style.display = 'block';
+      } catch (err) {
+        errorMsg.textContent = err.message;
+      }
+    });
+  </script>
+</body>
+</html>

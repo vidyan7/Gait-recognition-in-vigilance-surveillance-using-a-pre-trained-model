@@ -1,0 +1,85 @@
+{% extends "base.html" %} {% block body %}
+<main class="app-wrapper">
+  <div class="container-fluid py-4">
+    <div class="d-flex align-items-center mb-4">
+      <a href="/admin/profiles" class="btn btn-outline-primary me-3">
+        <i class="ri-arrow-left-line"></i> Back to Profiles
+      </a>
+      <h2 class="breadcrumb-title mb-0 flex-grow-1 fs-16">
+        Real-Time Gait Recognition
+      </h2>
+    </div>
+
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <p class="text-muted">
+          Use your webcam to detect and match gait signatures in real time.
+        </p>
+        <div class="text-center mb-3">
+          <button class="btn btn-primary me-2" onclick="startRealtime()">
+            Start Camera
+          </button>
+          <button class="btn btn-danger" onclick="stopRealtime()">
+            Stop Camera
+          </button>
+        </div>
+
+        <div class="video-container text-center">
+          <img
+            id="videoFeed"
+            src=""
+            alt="Camera feed will appear here"
+            class="d-none rounded shadow"
+            style="max-width: 640px; width: 100%; border: 2px solid #ccc"
+          />
+        </div>
+
+        <div id="realtimeResult" class="result-box text-center mt-3"></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Include Axios -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<script>
+  let updateInterval;
+
+  function startRealtime() {
+    const video = document.getElementById("videoFeed");
+    video.src = "/realtime";
+    video.classList.remove("d-none");
+
+    // Periodically fetch recognition result
+    updateInterval = setInterval(async () => {
+      try {
+        let res = await axios.get("/realtime_status");
+        console.log(res,"response")
+        if (res.data.name) {
+          document.getElementById(
+            "realtimeResult"
+          ).innerHTML = `<h5>Detected: ${res.data.name}</h5>
+                         <p>Similarity: ${res.data.similarity.toFixed(2)}%</p>`;
+        } else {
+          document.getElementById(
+            "realtimeResult"
+          ).innerHTML = `<p class="text-muted">No match detected</p>`;
+        }
+      } catch {
+        document.getElementById(
+          "realtimeResult"
+        ).innerHTML = `<p class="text-danger">Camera feed not available</p>`;
+      }
+    }, 2000); // update every 2 sec
+  }
+
+  function stopRealtime() {
+    const video = document.getElementById("videoFeed");
+    video.src = "";
+    video.classList.add("d-none");
+    clearInterval(updateInterval);
+    document.getElementById("realtimeResult").innerHTML = "";
+  }
+</script>
+{% endblock body %}

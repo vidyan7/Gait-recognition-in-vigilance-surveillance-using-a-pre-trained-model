@@ -1,0 +1,55 @@
+{% extends "base.html" %} {% block body %}
+<main class="app-wrapper">
+  <div class="container-fluid py-4">
+    <div class="d-flex align-items-center mb-4">
+      <a href="/admin/profiles" class="btn btn-outline-primary me-3">
+        <i class="ri-arrow-left-line"></i> Back to Profiles
+      </a>
+      <h2 class="breadcrumb-title mb-0 flex-grow-1 fs-16">Profile Details</h2>
+    </div>
+
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h5 class="card-title mb-0">Personal Information</h5>
+      </div>
+      <div class="card-body row">
+        <div class="col-md-6">
+          <p><strong>Name:</strong> {{ profile.name }}</p>
+          <p><strong>Age:</strong> {{ profile.age }}</p>
+          <p><strong>Gender:</strong> {{ profile.gender }}</p>
+          <p><strong>Role:</strong> {{ profile.role }}</p>
+        </div>
+        <div class="col-md-6">
+          <p><strong>Profile ID:</strong> {{ profile.id }}</p>
+          <p><strong>Feature Count:</strong> {{ profile.feature_length }}</p>
+          <p><strong>Created At:</strong> {{ profile.created_at }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card shadow-sm">
+      <div
+        class="card-header d-flex justify-content-between align-items-center"
+      >
+        <h5 class="card-title mb-0">Gait Video</h5>
+      
+ 
+      </div>
+      <div class="card-body text-center">
+        {% if profile.video_path %}
+        <video controls width="50%" class="rounded shadow">
+          <source
+            src="{{ url_for('uploaded_file', filename=profile.video_path.replace('\\', '/').split('/')[-1]) }}"
+            type="video/mp4"
+          />
+          Your browser does not support HTML5 video.
+        </video>
+        
+        {% else %}
+        <p class="text-muted">No video available for this profile.</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock body %}

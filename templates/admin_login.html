@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Mirrored from srbthemes.kcubeinfotech.com/mirbal/html/ltr/auth-signin.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 10 Oct 2025 17:03:38 GMT -->
+  <head>
+    <meta charset="utf-8" />
+    <title>SMART-GAIT</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <meta content="Bootstrap Admin & Dashboard Template" name="description" />
+    <meta content="SRBThemes" name="author" />
+
+    <!-- layout setup -->
+    <script type="module" src="../static/assets/js/layout-setup.js"></script>
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="../static/assets/images/favicon.png" />
+    <!-- Simplebar Css -->
+    <link
+      rel="stylesheet"
+      href="../static/assets/libs/simplebar/simplebar.min.css"
+    />
+
+    <!-- Swiper Css -->
+    <link
+      href="../static/assets/libs/swiper/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Nouislider Css -->
+    <link
+      href="../static/assets/libs/nouislider/nouislider.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Css -->
+    <link
+      href="../static/assets/css/bootstrap.min.css"
+      id="bootstrap-style"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!--icons css-->
+    <link
+      href="../static/assets/css/icons.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- App Css-->
+    <link
+      href="../static/assets/css/app.min.css"
+      id="app-style"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+
+  <body>
+    <div
+      class="min-vh-100 d-flex align-items-center justify-content-center py-10 px-5 auth-bg"
+    >
+      <div
+        class="main-wrapper border bg-white rounded-4 d-flex flex-column flex-lg-row gap-xl-5 position-relative overflow-hidden w-100 shadow"
+      >
+        <div
+          class="decoration-section m-5 bg-dark-subtle rounded-3 me-0 mb-0 mb-lg-5 mb-0 mb-lg-5"
+        >
+        <img src="../static/assets/images/bg1.jpeg" style="width: 500px;height: 600px;"/></div>
+        <div class="login-section bg-white rounded-4 p-6 px-xl-12">
+          <a
+            href="index-2.html"
+            class="d-flex justify-content-end align-items-center gap-2 logo-main mt-lg-2 mb-10"
+          >
+            <img
+              height="33"
+              width="33"
+              class="logo-dark"
+              alt="Dark Logo"
+              src="../static/assets/images/logo-md.png"
+            />
+            <h3 class="mb-0 lh-base fw-semibold">SMART-GAIT</h3>
+          </a>
+          <div class="mb-12">
+            <h5 class="mb-2">Welcome Back</h5>
+            <p class="text-muted mb-0">
+              Sign in to access your dashboard, manage data, and explore
+              analytics
+            </p>
+          </div>
+          <form id="signinForm" method="POST" action="/admin/login">
+            {% if error %}
+            <div class="alert alert-danger text-center">{{ error }}</div>
+            {% endif %}
+            <div class="mb-4">
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Name"
+                name="username"
+                required
+              />
+            </div>
+
+            <div class="mb-4">
+              <div class="position-relative">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="Password"
+                  name="password"
+                  required
+                />
+                <button
+                  type="button"
+                  class="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted toggle-password"
+                  id="toggle-password"
+                  data-target="password"
+                >
+                  <i class="ri-eye-off-line align-middle"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary w-100">
+                Sign In
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Swiper bundle js -->
+    <script src="../static/assets/libs/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Bootstrap bundle js -->
+    <script src="../static/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- simplebar js -->
+    <script src="../static/assets/libs/simplebar/simplebar.min.js"></script>
+
+    <!-- Scroll Top init -->
+    <script src="../static/assets/js/scroll-top.init.js"></script>
+    <!-- Gsap Animation -->
+    <script src="../static/assets/libs/gsap/gsap.min.js"></script>
+    <script src="../static/cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="../static/cdn.jsdelivr.net/gh/robin-dela/hover-effect%40latest/dist/hover-effect.umd.js"></script>
+
+    <!-- Common init -->
+    <script src="../static/assets/js/pages/common.init.js"></script>
+
+    <!-- Auth init -->
+    <script src="../static/assets/js/auth/auth.init.js"></script>
+  </body>
+
+  <!-- Mirrored from srbthemes.kcubeinfotech.com/mirbal/html/ltr/auth-signin.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 10 Oct 2025 17:03:38 GMT -->
+</html>

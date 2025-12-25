@@ -1,0 +1,245 @@
+{% extends "base.html" %} {% block body %}
+<main class="app-wrapper">
+  <div class="container-fluid">
+    <!-- Breadcrumb -->
+    <div
+      class="main-breadcrumb d-flex flex-wrap align-items-center my-4 position-relative gap-3"
+    >
+      <h2 class="breadcrumb-title mb-0 flex-grow-1 fs-16">
+        Manage Gait Profiles
+      </h2>
+      <div class="flex-shrink-0">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+            <li>
+              <i class="ri-home-4-line fs-16 me-2 lh-sm text-primary"></i>
+            </li>
+            <li class="breadcrumb-item"><a href="#">Profiles</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Add & View
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <!-- ======= Add Profile Form ======= -->
+    <div class="card mb-5">
+      <div class="card-header">
+        <h5 class="card-title mb-0">Add New Profile</h5>
+      </div>
+      <div class="card-body">
+        <form
+          id="uploadForm"
+          class="row g-3 needs-validation"
+          method="POST"
+          enctype="multipart/form-data"
+        >
+          <div class="col-md-4">
+            <label for="name" class="form-label">Full Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              class="form-control"
+              required
+            />
+          </div>
+
+          <div class="col-md-2">
+            <label for="age" class="form-label">Age</label>
+            <input
+              type="number"
+              name="age"
+              id="age"
+              class="form-control"
+              min="1"
+              max="120"
+              required
+            />
+          </div>
+
+          <div class="col-md-3">
+            <label for="gender" class="form-label">Gender</label>
+            <select name="gender" id="gender" class="form-select" required>
+              <option selected disabled value="">Choose...</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="col-md-3">
+            <label for="role" class="form-label">Role</label>
+            <select name="role" id="role" class="form-select" required>
+              <option selected disabled value="">Select role...</option>
+              <option>Suspect</option>
+              <option>Victim</option>
+              <option>Witness</option>
+              <option>Reference</option>
+            </select>
+          </div>
+
+          <div class="col-md-6">
+            <label for="video" class="form-label">Upload Gait Video</label>
+            <input
+              type="file"
+              name="video"
+              id="video"
+              class="form-control"
+              accept="video/*"
+              required
+            />
+          </div>
+
+          <div class="col-12 text-end mt-3">
+            <button class="btn btn-primary" type="submit">
+              Upload Profile
+            </button>
+          </div>
+        </form>
+
+        <div id="responseMsg" class="mt-4"></div>
+      </div>
+    </div>
+
+    <!-- ======= Profiles Table ======= -->
+    <div class="card">
+      <div
+        class="card-header d-flex justify-content-between align-items-center"
+      >
+        <h5 class="card-title mb-0">Stored Profiles</h5>
+        <button id="refreshBtn" class="btn btn-sm btn-secondary">
+          Refresh
+        </button>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table
+            class="table table-bordered table-striped align-middle text-center"
+          >
+            <thead class="table-light">
+              <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Role</th>
+                <th>Features</th>
+                <th>Created At</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="profileTableBody">
+              <tr>
+                <td colspan="7" class="text-muted">Loading profiles...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+  // Upload form handler
+  document
+    .getElementById("uploadForm")
+    .addEventListener("submit", async function (e) {
+      e.preventDefault();
+      const formData = new FormData(this);
+      document.getElementById("responseMsg").innerHTML =
+        "<p class='text-info'>Uploading and processing... Please wait.</p>";
+
+      try {
+        const response = await fetch("/upload", {
+          method: "POST",
+          body: formData,
+        });
+        const result = await response.json();
+
+        if (response.ok) {
+          document.getElementById(
+            "responseMsg"
+          ).innerHTML = `<div class="alert alert-success">✅ ${result.message}<br>ID: ${result.id}</div>`;
+          this.reset();
+          loadProfiles();
+        } else {
+          document.getElementById(
+            "responseMsg"
+          ).innerHTML = `<div class="alert alert-danger">❌ ${result.error}</div>`;
+        }
+      } catch (error) {
+        document.getElementById(
+          "responseMsg"
+        ).innerHTML = `<div class="alert alert-danger">⚠️ Failed: ${error}</div>`;
+      }
+    });
+
+  // Fetch and display all profiles
+  async function loadProfiles() {
+    const tbody = document.getElementById("profileTableBody");
+    tbody.innerHTML =
+      "<tr><td colspan='7' class='text-muted'>Loading...</td></tr>";
+
+    try {
+      const res = await fetch("/profiles");
+      const profiles = await res.json();
+
+      if (profiles.length === 0) {
+        tbody.innerHTML =
+          "<tr><td colspan='7' class='text-muted'>No profiles found.</td></tr>";
+        return;
+      }
+
+      tbody.innerHTML = "";
+      profiles.forEach((p) => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td>${p.name}</td>
+          <td>${p.age}</td>
+          <td>${p.gender}</td>
+          <td>${p.role}</td>
+          <td>${p.feature_length}</td>
+          <td>${p.created_at}</td>
+         <td>
+  <a href="/profile/${p.id}" class="btn btn-sm btn-info me-2">
+    <i class="uil uil-eye"></i> View
+  </a>
+  <button class="btn btn-sm btn-danger" onclick="deleteProfile('${p.id}')">
+    <i class="uil uil-trash"></i> Delete
+  </button>
+</td>
+
+        `;
+        tbody.appendChild(row);
+      });
+    } catch (error) {
+      tbody.innerHTML = `<tr><td colspan='7' class='text-danger'>Error: ${error}</td></tr>`;
+    }
+  }
+
+  // Delete a profile
+  async function deleteProfile(id) {
+    if (!confirm("Are you sure you want to delete this profile?")) return;
+    try {
+      const res = await fetch(`/delete_profile/${id}`, { method: "DELETE" });
+      const result = await res.json();
+      if (res.ok) {
+        alert(result.message);
+        loadProfiles();
+      } else {
+        alert(result.error);
+      }
+    } catch (error) {
+      alert("Error deleting profile: " + error);
+    }
+  }
+
+  // Refresh button
+  document.getElementById("refreshBtn").addEventListener("click", loadProfiles);
+
+  // Load profiles on page load
+  document.addEventListener("DOMContentLoaded", loadProfiles);
+</script>
+{% endblock body %}

@@ -1,0 +1,110 @@
+{% extends "base.html" %} {% block body %}
+<main class="app-wrapper">
+  <div class="container-fluid py-4">
+    <div class="d-flex align-items-center mb-4">
+      <a href="/admin/profiles" class="btn btn-outline-primary me-3">
+        <i class="ri-arrow-left-line"></i> Back to Profiles
+      </a>
+      <h2 class="breadcrumb-title mb-0 flex-grow-1 fs-16">Compare Profiles</h2>
+    </div>
+
+    <div class="card shadow-sm mb-4">
+      <div class="card-body">
+        <h5 class="card-title mb-3">Select Profiles to Compare</h5>
+        <div class="row g-2 mb-3">
+          <div class="col-md-5">
+            <label for="profileA" class="form-label">Profile A</label>
+            <select id="profileA" class="form-select"></select>
+          </div>
+          <div class="col-md-5">
+            <label for="profileB" class="form-label">Profile B</label>
+            <select id="profileB" class="form-select"></select>
+          </div>
+          <div class="col-md-2 d-flex align-items-end">
+            <button class="btn btn-success w-100" onclick="compareProfiles()">
+              Compare
+            </button>
+          </div>
+        </div>
+
+        <button class="btn btn-secondary mb-3" onclick="loadProfiles()">
+          Refresh Profiles
+        </button>
+
+        <ul class="list-group mb-3" id="profileList"></ul>
+
+        <div id="compareResult" class="result-box"></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+  async function loadProfiles() {
+    try {
+      let res = await axios.get("/profiles");
+      console.log(res);
+      let profiles = res.data;
+
+      let list = document.getElementById("profileList");
+      let selA = document.getElementById("profileA");
+      let selB = document.getElementById("profileB");
+
+      list.innerHTML = "";
+      selA.innerHTML = "";
+      selB.innerHTML = "";
+
+      profiles.forEach((p) => {
+        // List
+        let li = document.createElement("li");
+        li.className = "list-group-item";
+        li.textContent = `${p.name} (ID: ${p.id})`;
+        list.appendChild(li);
+
+        // Select options
+        let optA = document.createElement("option");
+        optA.value = p.id;
+        optA.textContent = p.name;
+        selA.appendChild(optA);
+
+        let optB = document.createElement("option");
+        optB.value = p.id;
+        optB.textContent = p.name;
+        selB.appendChild(optB);
+      });
+    } catch (err) {
+      console.error(err);
+      alert("Failed to load profiles.");
+    }
+  }
+
+  async function compareProfiles() {
+    let id1 = document.getElementById("profileA").value;
+    let id2 = document.getElementById("profileB").value;
+    if (!id1 || !id2) {
+      document.getElementById(
+        "compareResult"
+      ).innerHTML = `<div class="alert alert-warning">Please select two profiles</div>`;
+      return;
+    }
+
+    try {
+      let res = await axios.post("/compare", { id1, id2 });
+      let score = res.data.similarity_score;
+      document.getElementById(
+        "compareResult"
+      ).innerHTML = `<div class="alert alert-info">
+        Similarity Score: <b>${score}%</b>
+        <a class="btn btn-sm btn-danger ms-3" href="/report/${id1}/${id2}">Download Report</a>
+      </div>`;
+    } catch (err) {
+      let msg = err.response?.data?.error || "Comparison failed";
+      document.getElementById(
+        "compareResult"
+      ).innerHTML = `<div class="alert alert-danger">${msg}</div>`;
+    }
+  }
+
+  window.onload = loadProfiles;
+</script>
+{% endblock body %}
