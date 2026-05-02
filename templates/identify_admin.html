@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block body %}
+<main class="app-wrapper">
+  <div class="container-fluid py-4">
+    <div class="d-flex align-items-center mb-4">
+      <a href="/admin/profiles" class="btn btn-outline-primary me-3">
+        <i class="ri-arrow-left-line"></i> Back to Profiles
+      </a>
+      <h2 class="breadcrumb-title mb-0 flex-grow-1 fs-16">
+        Gait Recognition from Video Upload
+      </h2>
+    </div>
+
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <p class="text-muted">
+          Upload a video to detect and match gait signatures.
+        </p>
+
+        <form id="identifyForm" class="text-center mb-3">
+          <input type="file" id="videoInput" accept="video/*" required />
+          <button type="submit" class="btn btn-primary ms-2">
+            Identify
+          </button>
+        </form>
+
+        <div id="identifyResult" class="result-box text-center mt-3"></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Include Axios -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<script>
+  const form = document.getElementById('identifyForm');
+  const videoInput = document.getElementById('videoInput');
+  const resultDiv = document.getElementById('identifyResult');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    resultDiv.innerHTML = '';
+
+    if (!videoInput.files.length) {
+      resultDiv.innerHTML = '<p class="text-danger">Please select a video file.</p>';
+      return;
+    }
+
+    const file = videoInput.files[0];
+    const formData = new FormData();
+    formData.append('video', file);
+
+    try {
+      resultDiv.innerHTML = '<p>Identifying...</p>';
+      const response = await axios.post('/identify', formData, {
+        headers: { 'Content-Type': 'multipart/form-data' },
+      });
+
+      const data = response.data;
+      resultDiv.innerHTML = `
+        <h5>Match Found: ${data.name}</h5>
+        <p>Age: ${data.age}</p>
+        <p>Gender: ${data.gender}</p>
+        <p>Role: ${data.role}</p>
+        <p>Confidence Score: ${(data.confidence * 100).toFixed(2)}%</p>
+        <p>Similarity: ${data.similarity.toFixed(4)}</p>
+        <p><em>${data.interpretation || ''}</em></p>
+      `;
+    } catch (error) {
+      let msg = 'Failed to identify person.';
+      if (error.response && error.response.data && error.response.data.error) {
+        msg = error.response.data.error;
+      }
+      resultDiv.innerHTML = `<p class="text-danger">${msg}</p>`;
+    }
+  });
+</script>
+{% endblock body %}

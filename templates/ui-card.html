@@ -1,0 +1,4408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Mirrored from srbthemes.kcubeinfotech.com/mirbal/html/ltr/ui-card.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 10 Oct 2025 17:03:51 GMT -->
+  <head>
+    <meta charset="utf-8" />
+    <title>UI Card | Mirbal Admin & Dashboard Template</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <meta content="Bootstrap Admin & Dashboard Template" name="description" />
+    <meta content="SRBThemes" name="author" />
+
+    <!-- layout setup -->
+    <script type="module" src="../static/assets/js/layout-setup.js"></script>
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="../static/assets/images/favicon.png" />
+    <!-- Simplebar Css -->
+    <link
+      rel="stylesheet"
+      href="../static/assets/libs/simplebar/simplebar.min.css"
+    />
+
+    <!-- Swiper Css -->
+    <link
+      href="../static/assets/libs/swiper/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Nouislider Css -->
+    <link
+      href="../static/assets/libs/nouislider/nouislider.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Css -->
+    <link
+      href="../static/assets/css/bootstrap.min.css"
+      id="bootstrap-style"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!--icons css-->
+    <link
+      href="../static/assets/css/icons.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- App Css-->
+    <link
+      href="../static/assets/css/app.min.css"
+      id="app-style"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+
+  <body>
+    <!--begin::App-->
+    <div id="layout-wrapper">
+      <!-- Begin Header -->
+      <header class="app-header" id="appHeader">
+        <div class="container-fluid w-100 px-0 px-md-2">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="d-inline-flex align-items-center gap-2">
+              <a
+                href="index-2.html"
+                class="align-items-center logo-main d-none me-5 gap-2"
+              >
+                <img
+                  height="33"
+                  width="33"
+                  class="logo-dark"
+                  alt="Dark Logo"
+                  src="../static/assets/images/logo-md.png"
+                />
+                <h3 class="text-white text-opacity-80 mb-0 lh-base fw-semibold">
+                  Mirbal
+                </h3>
+              </a>
+              <button
+                type="button"
+                class="vertical-toggle btn text-muted rounded-circle icon-btn"
+                id="toggleSidebar"
+                aria-label="Toggle Sidebar"
+              >
+                <i class="ri-menu-2-line fs-4 toggle-left-arrow"></i>
+                <i class="ri-close-line fs-4 toggle-right-arrow d-none"></i>
+              </button>
+              <button
+                type="button"
+                class="horizontal-toggle btn text-muted rounded-circle icon-btn header-btn d-none header-menu-btn"
+                id="toggleHorizontal"
+                aria-label="Toggle Menu"
+              >
+                <i class="ri-menu-2-line fs-5 lh-sm"></i>
+              </button>
+            </div>
+            <div class="flex-shrink-0 d-flex align-items-center gap-1 gap-md-3">
+              <button
+                class="btn text-muted rounded-circle icon-btn header-menu-btn"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#searchModal"
+              >
+                <i class="ri-search-line fs-5"></i>
+              </button>
+              <div class="dropdown pe-dropdown-mega d-none d-md-block">
+                <button
+                  class="btn rounded-circle text-muted icon-btn fs-5 header-menu-btn position-relative"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  aria-label="Messages"
+                >
+                  <i class="ri-translate"></i>
+                </button>
+                <ul
+                  class="dropdown-menu dropdown-menu-clickable dropdown-menu-end dropdown-mega-xs header-dropdown-menu pe-noti-dropdown-menu shadow-none border p-0"
+                >
+                  <div class="card mb-0 border-0">
+                    <div class="card-header p-4">
+                      <h5 class="card-title">Languages</h5>
+                    </div>
+                    <div class="noti-item d-flex align-items-center gap-2 py-2">
+                      <img
+                        src="../static/assets/images/circle-flag/gb.svg"
+                        alt="English"
+                        width="26"
+                        height="26"
+                        class="rounded-circle"
+                      />
+                      English
+                    </div>
+                    <div class="noti-item d-flex align-items-center gap-2 py-2">
+                      <img
+                        src="../static/assets/images/circle-flag/fr.svg"
+                        alt="French"
+                        width="26"
+                        height="26"
+                        class="rounded-circle"
+                      />
+                      French
+                    </div>
+                    <div class="noti-item d-flex align-items-center gap-2 py-2">
+                      <img
+                        src="../static/assets/images/circle-flag/us.svg"
+                        alt="Spanish"
+                        width="26"
+                        height="26"
+                        class="rounded-circle"
+                      />
+                      Spanish
+                    </div>
+                    <div class="noti-item d-flex align-items-center gap-2 py-2">
+                      <img
+                        src="../static/assets/images/circle-flag/de.svg"
+                        alt="German"
+                        width="26"
+                        height="26"
+                        class="rounded-circle"
+                      />
+                      German
+                    </div>
+                    <div class="noti-item d-flex align-items-center gap-2 py-2">
+                      <img
+                        src="../static/assets/images/circle-flag/it.svg"
+                        alt="Italian"
+                        width="26"
+                        height="26"
+                        class="rounded-circle"
+                      />
+                      Italian
+                    </div>
+                  </div>
+                </ul>
+              </div>
+              <div class="dropdown pe-dropdown-mega">
+                <button
+                  class="btn text-muted rounded-circle icon-btn fs-5 header-menu-btn position-relative"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  aria-label="Notifications"
+                >
+                  <i class="ri-notification-4-line"></i>
+                  <div class="icon-dot bg-danger">
+                    <span class="ping bg-danger"></span>
+                  </div>
+                </button>
+                <div
+                  class="dropdown-menu dropdown-menu-clickable dropdown-mega-md dropdown-menu-end header-dropdown-menu shadow-sm border p-0"
+                >
+                  <div class="card mb-0 border-0">
+                    <div class="card-header pb-5">
+                      <h5 class="card-title">Notifications</h5>
+                      <a href="#!" class="fw-medium">See All</a>
+                    </div>
+                    <div class="card-body p-0">
+                      <ul
+                        class="nav nav-tabs-bordered nav-dark justify-content-evenly"
+                        role="tablist"
+                      >
+                        <li class="nav-item" role="presentation">
+                          <a
+                            class="nav-link px-2 active"
+                            data-bs-toggle="tab"
+                            href="#all"
+                            role="tab"
+                            aria-selected="false"
+                            tabindex="-1"
+                          >
+                            <span>All</span>
+                            <span
+                              class="h-20px w-20px ms-1 d-inline-flex align-items-center justify-content-center border fs-12 text-muted rounded-1"
+                              >3</span
+                            >
+                          </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <a
+                            class="nav-link px-2"
+                            data-bs-toggle="tab"
+                            href="#messages"
+                            role="tab"
+                            aria-selected="true"
+                          >
+                            <span>Messages</span>
+                            <span
+                              class="h-20px w-20px ms-1 d-inline-flex align-items-center justify-content-center border fs-12 text-muted rounded-1"
+                              >2</span
+                            >
+                          </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <a
+                            class="nav-link px-2"
+                            data-bs-toggle="tab"
+                            href="#tasks"
+                            role="tab"
+                            aria-selected="false"
+                            tabindex="-1"
+                          >
+                            <span>Tasks</span>
+                            <span
+                              class="h-20px w-20px ms-1 d-inline-flex align-items-center justify-content-center border fs-12 text-muted rounded-1"
+                              >3</span
+                            >
+                          </a>
+                        </li>
+                        <li class="nav-item align-middle" role="presentation">
+                          <a
+                            class="nav-link px-2"
+                            data-bs-toggle="tab"
+                            href="#alerts"
+                            role="tab"
+                            aria-selected="false"
+                            tabindex="-1"
+                          >
+                            <span>Alerts</span>
+                            <span
+                              class="h-20px w-20px ms-1 d-inline-flex align-items-center justify-content-center border fs-12 text-muted rounded-1"
+                              >0</span
+                            >
+                          </a>
+                        </li>
+                      </ul>
+                      <div
+                        class="tab-content norification-tab"
+                        id="notificationTabContent"
+                      >
+                        <div
+                          class="tab-pane fade show active"
+                          id="all"
+                          role="tabpanel"
+                        >
+                          <div
+                            class="notification-panel"
+                            data-simplebar
+                            style="max-height: 324px"
+                          >
+                            <div class="notification">
+                              <h6 class="message mb-2">You have a new task</h6>
+                              <p class="fs-14 text-muted mb-0">Just now</p>
+                            </div>
+                            <div class="notification unread">
+                              <h6 class="message mb-2">
+                                New message from Naomi
+                              </h6>
+                              <p class="fs-14 text-muted mb-0">1 hour ago</p>
+                            </div>
+                            <div class="notification">
+                              <h6 class="message mb-2">
+                                Your role has been set to Admin
+                              </h6>
+                              <p class="fs-14 text-muted mb-0">3 days ago</p>
+                            </div>
+                            <div class="notification">
+                              <h6 class="message mb-2">
+                                New message from Robert
+                              </h6>
+                              <p class="fs-14 text-muted mb-0">2 weeks ago</p>
+                            </div>
+                            <div class="notification unread">
+                              <h6 class="message mb-2">
+                                Payment received from Jonathan
+                              </h6>
+                              <p class="fs-14 text-muted mb-0">3 days ago</p>
+                            </div>
+                            <div class="notification unread">
+                              <h6 class="message mb-2">
+                                New comment on your post
+                              </h6>
+                              <p class="fs-14 text-muted mb-0">5 hours ago</p>
+                            </div>
+                          </div>
+                          <div class="p-4 text-end">
+                            <a href="#!" class="text-body"
+                              ><i
+                                class="ri-check-double-line fs-5 text-primary"
+                              ></i>
+                              Mark all as read</a
+                            >
+                          </div>
+                        </div>
+                        <div
+                          class="tab-pane fade"
+                          id="messages"
+                          role="tabpanel"
+                        >
+                          <div
+                            class="notification-panel"
+                            data-simplebar
+                            style="max-height: 324px"
+                          >
+                            <div class="notification unread">
+                              <h6 class="message mb-2">
+                                New message from Emma
+                              </h6>
+                              <p class="fs-14 text-muted mb-0">5 minutes ago</p>
+                            </div>
+                            <div class="notification">
+                              <h6 class="message mb-2">
+                                Reminder: Meeting at 3 PM
+                              </h6>
+                              <p class="fs-14 text-muted mb-0">
+                                30 minutes ago
+                              </p>
+                            </div>
+                            <div class="notification unread">
+                              <h6 class="message mb-2">
+                                Newsletter from Marketing
+                              </h6>
+                              <p class="fs-14 text-muted mb-0">1 day ago</p>
+                            </div>
+                            <div class="notification">
+                              <h6 class="message mb-2">
+                                System message: Update complete
+                              </h6>
+                              <p class="fs-14 text-muted mb-0">4 days ago</p>
+                            </div>
+                            <div class="notification">
+                              <h6 class="message mb-2">
+                                Message archived from Clara
+                              </h6>
+                              <p class="fs-14 text-muted mb-0">1 week ago</p>
+                            </div>
+                          </div>
+                          <div class="p-4 text-end">
+                            <a href="#!" class="text-body"
+                              ><i
+                                class="ri-check-double-line fs-5 text-primary"
+                              ></i>
+                              Mark all as read</a
+                            >
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="tasks" role="tabpanel">
+                          <div
+                            class="notification-panel"
+                            data-simplebar
+                            style="max-height: 324px"
+                          >
+                            <div class="notification unread">
+                              <h6 class="message mb-2">
+                                Task assigned: UI Design
+                              </h6>
+                              <p class="fs-14 text-muted mb-0">Just now</p>
+                            </div>
+                            <div class="notification">
+                              <h6 class="message mb-2">
+                                Submit project report
+                              </h6>
+                              <p class="fs-14 text-muted mb-0">2 hours ago</p>
+                            </div>
+                            <div class="notification unread">
+                              <h6 class="message mb-2">
+                                Task completed: API Integration
+                              </h6>
+                              <p class="fs-14 text-muted mb-0">Yesterday</p>
+                            </div>
+                            <div class="notification unread">
+                              <h6 class="message mb-2">
+                                Code review: Pending approval
+                              </h6>
+                              <p class="fs-14 text-muted mb-0">1 week ago</p>
+                            </div>
+                          </div>
+                          <div class="p-4 text-end">
+                            <a href="#!" class="text-body"
+                              ><i
+                                class="ri-check-double-line fs-5 text-primary"
+                              ></i>
+                              Mark all as read</a
+                            >
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="alerts" role="tabpanel">
+                          <div
+                            class="d-flex flex-column justify-content-center align-items-center text-center p-5 min-h-350px"
+                          >
+                            <img
+                              src="../static/cdn-icons-png.flaticon.com/512/564/564619.png"
+                              alt="No Alert Box"
+                              width="70"
+                              class="mb-5"
+                            />
+                            <h5 class="mb-3">All caught up!</h5>
+                            <p class="text-muted mb-0 lh-base max-w-300px">
+                              You don’t have any new alerts right now. Keep an
+                              eye here for updates.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown pe-dropdown-mega">
+                <button
+                  class="btn text-muted rounded-circle icon-btn fs-5 header-menu-btn position-relative"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  aria-label="Messages"
+                >
+                  <i class="ri-shopping-cart-line"></i>
+                  <div class="icon-dot bg-success">
+                    <span class="ping bg-success"></span>
+                  </div>
+                </button>
+                <ul
+                  class="dropdown-menu dropdown-menu-clickable dropdown-menu-end dropdown-mega-md header-dropdown-menu shadow-sm border p-0"
+                >
+                  <div class="card mb-0 border-0">
+                    <div class="card-header pb-2">
+                      <h5 class="card-title">Cart Items</h5>
+                      <a href="#!" class="fw-medium">See All</a>
+                    </div>
+                    <div class="card-body p-0">
+                      <div data-simplebar style="max-height: 355px">
+                        <div class="px-5 py-4 border-bottom">
+                          <div class="row align-items-center">
+                            <div class="col-7">
+                              <a
+                                href="#!"
+                                class="mb-2 text-body fw-medium d-block"
+                                >Margherita Pizza</a
+                              >
+                              <p class="text-muted mb-0">
+                                Classic cheese & tomato
+                              </p>
+                            </div>
+                            <div class="col-3">
+                              <input
+                                type="number"
+                                class="form-control form-control-sm text-center w-56px"
+                                value="2"
+                                min="1"
+                              />
+                            </div>
+                            <div class="col-2 text-end">
+                              <h6 class="mb-0">₹299</h6>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="px-5 py-4 border-bottom">
+                          <div class="row align-items-center">
+                            <div class="col-7">
+                              <a
+                                href="#!"
+                                class="mb-2 text-body fw-medium d-block"
+                                >Veg Burger</a
+                              >
+                              <p class="text-muted mb-0">With crispy fries</p>
+                            </div>
+                            <div class="col-3">
+                              <input
+                                type="number"
+                                class="form-control form-control-sm text-center w-56px"
+                                value="1"
+                                min="1"
+                              />
+                            </div>
+                            <div class="col-2 text-end">
+                              <h6 class="mb-0">₹149</h6>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="px-5 py-4 border-bottom">
+                          <div class="row align-items-center">
+                            <div class="col-7">
+                              <a
+                                href="#!"
+                                class="mb-2 text-body fw-medium d-block"
+                                >Paneer Tikka</a
+                              >
+                              <p class="text-muted mb-0">
+                                Grilled cottage cheese
+                              </p>
+                            </div>
+                            <div class="col-3">
+                              <input
+                                type="number"
+                                class="form-control form-control-sm text-center w-56px"
+                                value="3"
+                                min="1"
+                              />
+                            </div>
+                            <div class="col-2 text-end">
+                              <h6 class="mb-0">₹220</h6>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="px-5 py-4 border-bottom">
+                          <div class="row align-items-center">
+                            <div class="col-7">
+                              <a
+                                href="#!"
+                                class="mb-2 text-body fw-medium d-block"
+                                >Butter Naan</a
+                              >
+                              <p class="text-muted mb-0">
+                                Soft & buttery flatbread
+                              </p>
+                            </div>
+                            <div class="col-3">
+                              <input
+                                type="number"
+                                class="form-control form-control-sm text-center w-56px"
+                                value="4"
+                                min="1"
+                              />
+                            </div>
+                            <div class="col-2 text-end">
+                              <h6 class="mb-0">₹40</h6>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="px-5 py-4 border-bottom">
+                          <div class="row align-items-center">
+                            <div class="col-7">
+                              <a
+                                href="#!"
+                                class="mb-2 text-body fw-medium d-block"
+                                >Cold Coffee</a
+                              >
+                              <p class="text-muted mb-0">
+                                Chilled & refreshing
+                              </p>
+                            </div>
+                            <div class="col-3">
+                              <input
+                                type="number"
+                                class="form-control form-control-sm text-center w-56px"
+                                value="2"
+                                min="1"
+                              />
+                            </div>
+                            <div class="col-2 text-end">
+                              <h6 class="mb-0">₹99</h6>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="px-5 py-4 border-bottom">
+                          <div class="row align-items-center">
+                            <div class="col-7">
+                              <a
+                                href="#!"
+                                class="mb-2 text-body fw-medium d-block"
+                                >Chocolate Lava Cake</a
+                              >
+                              <p class="text-muted mb-0">
+                                Molten chocolate dessert
+                              </p>
+                            </div>
+                            <div class="col-3">
+                              <input
+                                type="number"
+                                class="form-control form-control-sm text-center w-56px"
+                                value="1"
+                                min="1"
+                              />
+                            </div>
+                            <div class="col-2 text-end">
+                              <h6 class="mb-0">₹129</h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="py-4 px-5 text-end">
+                      <h6 class="mb-0">Total: ₹1495.00</h6>
+                    </div>
+                  </div>
+                </ul>
+              </div>
+              <button
+                class="btn text-muted rounded-circle icon-btn fs-5 header-menu-btn d-none d-md-inline-flex"
+                type="button"
+                id="toggleFullscreen"
+                aria-label="Toggle fullscreen"
+              >
+                <i class="ri-fullscreen-line"></i>
+              </button>
+              <div id="toggleMode">
+                <button
+                  id="theme-toggle"
+                  class="btn icon-btn theme-toggle"
+                  title="Toggles light & dark theme"
+                  aria-label="Switch to dark theme"
+                  aria-live="polite"
+                  type="button"
+                >
+                  <svg
+                    class="sun-and-moon"
+                    aria-hidden="true"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <mask class="moon" id="moon-mask">
+                      <rect
+                        x="0"
+                        y="0"
+                        width="100%"
+                        height="100%"
+                        fill="white"
+                      />
+                      <circle cx="24" cy="10" r="6" fill="black" />
+                    </mask>
+                    <circle
+                      class="sun"
+                      cx="12"
+                      cy="12"
+                      r="6"
+                      mask="url(#moon-mask)"
+                      fill="currentColor"
+                    />
+                    <g class="sun-beams" stroke="currentColor">
+                      <line x1="12" y1="1" x2="12" y2="3" />
+                      <line x1="12" y1="21" x2="12" y2="23" />
+                      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                      <line x1="1" y1="12" x2="3" y2="12" />
+                      <line x1="21" y1="12" x2="23" y2="12" />
+                      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </g>
+                  </svg>
+                </button>
+              </div>
+              <div class="dropdown pe-dropdown-mega">
+                <button
+                  class="btn p-0 gap-2 text-start d-flex align-items-center"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span class="text-end mt-2 d-none d-md-block">
+                    <span class="user-name d-block lh-1 fs-14"
+                      >Sophie Bennett</span
+                    >
+                    <span class="text-muted fw-normal fs-13">Web Designer</span>
+                  </span>
+                  <span
+                    class="story-ring h-40px w-40px rounded-circle d-flex justify-content-center align-items-center"
+                  >
+                    <img
+                      src="../static/assets/images/avatar/avatar-16.jpg"
+                      alt="Avatar"
+                      class="h-36px w-36px rounded-circle user-img"
+                    />
+                  </span>
+                </button>
+                <div
+                  class="dropdown-menu dropdown-mega-xs dropdown-menu-end header-dropdown-menu shadow-sm border"
+                >
+                  <div
+                    class="d-flex gap-4 align-items-center justify-content-between mb-2 py-2 px-4 border rounded-2"
+                  >
+                    <div>
+                      <h6 class="mb-1 fs-14">Sophie Bennett</h6>
+                      <small class="text-muted mb-0">sophie@gmail.com</small>
+                    </div>
+                    <div
+                      class="story-ring h-44px w-44px rounded-circle d-flex justify-content-center align-items-center"
+                    >
+                      <img
+                        src="../static/assets/images/avatar/avatar-16.jpg"
+                        alt="Avatar"
+                        class="h-40px w-40px rounded-circle"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <ul class="list-unstyled mb-0">
+                      <li class="profile-item">
+                        <a href="pages-profile.html" class="text-body">
+                          <i class="ri-user-line me-3"></i>Profile
+                        </a>
+                      </li>
+                      <li class="profile-item">
+                        <a
+                          href="#!"
+                          class="text-body d-flex align-items-center justify-content-between"
+                        >
+                          <span>
+                            <i class="ri-group-line me-3"></i>Community
+                          </span>
+                          <span class="fw-bold">+</span>
+                        </a>
+                      </li>
+                      <li class="profile-item">
+                        <a
+                          href="#!"
+                          class="text-body d-flex align-items-center justify-content-between"
+                        >
+                          <span>
+                            <i class="ri-vip-crown-line me-3"></i>Subscription
+                          </span>
+                          <span class="badge bg-success-subtle text-success"
+                            >PRO</span
+                          >
+                        </a>
+                      </li>
+                      <li class="profile-item">
+                        <a href="#!" class="text-body">
+                          <i class="ri-settings-3-line me-3"></i>Settings
+                        </a>
+                      </li>
+                      <li class="profile-item">
+                        <a href="#!" class="text-body">
+                          <i class="ri-question-line me-3"></i>Help center
+                        </a>
+                      </li>
+                      <li class="profile-item">
+                        <a href="auth-signout.html" class="text-danger">
+                          <i class="ri-logout-box-r-line me-3"></i>Sign out
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- END Header -->
+
+      <div class="header-wrapper"></div>
+
+      <!-- Search Modal -->
+      <div
+        class="modal fade search-modal"
+        id="searchModal"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="searchModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header d-block">
+              <div class="form-icon">
+                <input
+                  type="text"
+                  class="form-control form-control-icon"
+                  id="searchInputInModal"
+                  placeholder="Search"
+                  required
+                />
+                <div class="header-search-btn w-44px">
+                  <i class="ri-search-line text-muted fs-16"></i>
+                </div>
+                <button
+                  type="button"
+                  class="btn-close position-absolute end-0 top-50 translate-middle-y d-inline-block m-0"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+            </div>
+            <div class="modal-body" data-simplebar id="list-items">
+              <ul class="list-unstyled mb-0" id="searchList"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <aside class="pe-app-sidebar" id="sidebar">
+        <div
+          class="pe-app-sidebar-logo px-5 d-flex align-items-center position-relative"
+        >
+          <!--begin::Brand Image-->
+          <a href="index-2.html" class="d-flex gap-2 logo-main">
+            <img
+              height="33"
+              width="33"
+              class="logo-dark"
+              alt="Dark Logo"
+              src="../static/assets/images/logo-md.png"
+            />
+            <h3 class="text-white text-opacity-80 mb-0 lh-base fw-semibold">
+              Mirbal
+            </h3>
+          </a>
+          <button
+            type="button"
+            id="sidebarDefaultArrow"
+            class="btn btn-sm p-0 fs-4 ms-auto float-end d-none icon-hover-btn text-white text-opacity-60 d-none"
+          >
+            <i class="ri-arrow-right-double-line"></i>
+          </button>
+          <!--end::Brand Image-->
+        </div>
+        <nav
+          class="pe-app-sidebar-menu nav nav-pills"
+          data-simplebar
+          id="sidebar-simplebar"
+        >
+          <div class="d-flex align-items-start flex-column w-100">
+            <ul class="pe-main-menu list-unstyled">
+              <!-- Main Menu -->
+              <li class="pe-menu-title">Main</li>
+              <li class="pe-slide pe-has-sub">
+                <a
+                  href="#collapseDashboards"
+                  class="pe-nav-link"
+                  data-bs-toggle="collapse"
+                  aria-expanded="false"
+                  aria-controls="collapseDashboards"
+                  onclick="toggleCollapse('collapseAuth', this)"
+                >
+                  <i class="uil uil-tachometer-fast-alt pe-nav-icon"></i>
+                  <span class="pe-nav-content">Dashboards</span>
+                  <i class="ri-arrow-right-s-line pe-nav-arrow arrow-right"></i>
+                  <i class="ri-arrow-left-s-line pe-nav-arrow arrow-left"></i>
+                </a>
+                <ul class="pe-slide-menu collapse" id="collapseDashboards">
+                  <li class="pe-slide-item">
+                    <a href="index-2.html" class="pe-nav-link">
+                      Social Media
+                    </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="dashboard-credit-card.html" class="pe-nav-link">
+                      Credit Card
+                    </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="dashboard-restaurant.html" class="pe-nav-link">
+                      Restaurant
+                    </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="dashboard-hotel.html" class="pe-nav-link">
+                      Hotel
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="pe-slide pe-has-sub">
+                <a
+                  href="#collapseApplications"
+                  class="pe-nav-link"
+                  data-bs-toggle="collapse"
+                  aria-expanded="false"
+                  aria-controls="collapseApplications"
+                >
+                  <i class="uil uil-apps pe-nav-icon"></i>
+                  <span class="pe-nav-content">Apps</span>
+                  <i class="ri-arrow-right-s-line pe-nav-arrow arrow-right"></i>
+                  <i class="ri-arrow-left-s-line pe-nav-arrow arrow-left"></i>
+                </a>
+                <ul class="pe-slide-menu collapse" id="collapseApplications">
+                  <li class="pe-slide-item">
+                    <a href="apps-calendar.html" class="pe-nav-link">
+                      Calendar
+                    </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="apps-chat.html" class="pe-nav-link"> Chat </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="apps-email.html" class="pe-nav-link"> Email </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="apps-kanban.html" class="pe-nav-link"> Kanban </a>
+                  </li>
+                  <li class="pe-slide-item pe-has-sub">
+                    <a
+                      href="#collapseSocialMedia"
+                      class="pe-nav-link"
+                      data-bs-toggle="collapse"
+                      aria-expanded="false"
+                      aria-controls="collapseSocialMedia"
+                    >
+                      <span class="pe-nav-sub-content">Social Media</span>
+                      <i
+                        class="ri-arrow-right-s-line pe-nav-arrow arrow-right"
+                      ></i>
+                      <i
+                        class="ri-arrow-left-s-line pe-nav-arrow arrow-left"
+                      ></i>
+                    </a>
+                    <ul class="pe-slide-menu collapse" id="collapseSocialMedia">
+                      <li class="pe-slide-item">
+                        <a href="apps-social-profile.html" class="pe-nav-link">
+                          Profile
+                        </a>
+                      </li>
+                      <li class="pe-slide-item">
+                        <a
+                          href="apps-social-activities.html"
+                          class="pe-nav-link"
+                        >
+                          Activities
+                        </a>
+                      </li>
+                      <li class="pe-slide-item pe-has-sub">
+                        <a
+                          href="#collapseFriends"
+                          class="pe-nav-link"
+                          data-bs-toggle="collapse"
+                          aria-expanded="false"
+                          aria-controls="collapseFriends"
+                        >
+                          <span class="pe-nav-sub-content">Friends</span>
+                          <i
+                            class="ri-arrow-right-s-line pe-nav-arrow arrow-right"
+                          ></i>
+                          <i
+                            class="ri-arrow-left-s-line pe-nav-arrow arrow-left"
+                          ></i>
+                        </a>
+                        <ul class="pe-slide-menu collapse" id="collapseFriends">
+                          <li class="pe-slide-item">
+                            <a
+                              href="apps-social-friends.html"
+                              class="pe-nav-link"
+                            >
+                              Friend List
+                            </a>
+                          </li>
+                          <li class="pe-slide-item">
+                            <a
+                              href="apps-social-friend-profile.html"
+                              class="pe-nav-link"
+                            >
+                              Friend Profile
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="pe-slide-item pe-has-sub">
+                        <a
+                          href="#collapseMessages"
+                          class="pe-nav-link"
+                          data-bs-toggle="collapse"
+                          aria-expanded="false"
+                          aria-controls="collapseMessages"
+                        >
+                          <span class="pe-nav-sub-content">Messages</span>
+                          <i
+                            class="ri-arrow-right-s-line pe-nav-arrow arrow-right"
+                          ></i>
+                          <i
+                            class="ri-arrow-left-s-line pe-nav-arrow arrow-left"
+                          ></i>
+                        </a>
+                        <ul
+                          class="pe-slide-menu collapse"
+                          id="collapseMessages"
+                        >
+                          <li class="pe-slide-item">
+                            <a
+                              href="apps-social-inbox.html"
+                              class="pe-nav-link"
+                            >
+                              Inbox
+                            </a>
+                          </li>
+                          <li class="pe-slide-item">
+                            <a
+                              href="apps-social-compose.html"
+                              class="pe-nav-link"
+                            >
+                              Compose
+                            </a>
+                          </li>
+                          <li class="pe-slide-item">
+                            <a href="apps-social-view.html" class="pe-nav-link">
+                              View
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="pe-slide-item">
+                        <a href="apps-social-settings.html" class="pe-nav-link">
+                          Settings
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="pe-slide-item pe-has-sub">
+                    <a
+                      href="#collapseCreditCard"
+                      class="pe-nav-link"
+                      data-bs-toggle="collapse"
+                      aria-expanded="false"
+                      aria-controls="collapseCreditCard"
+                    >
+                      <span class="pe-nav-sub-content">Credit Card</span>
+                      <i
+                        class="ri-arrow-right-s-line pe-nav-arrow arrow-right"
+                      ></i>
+                      <i
+                        class="ri-arrow-left-s-line pe-nav-arrow arrow-left"
+                      ></i>
+                    </a>
+                    <ul class="pe-slide-menu collapse" id="collapseCreditCard">
+                      <li class="pe-slide-item">
+                        <a
+                          href="apps-credit-card-center.html"
+                          class="pe-nav-link"
+                        >
+                          Card Center
+                        </a>
+                      </li>
+                      <li class="pe-slide-item">
+                        <a
+                          href="apps-credit-card-transiction.html"
+                          class="pe-nav-link"
+                        >
+                          Transictions
+                        </a>
+                      </li>
+                      <li class="pe-slide-item">
+                        <a
+                          href="apps-credit-card-transiction-details.html"
+                          class="pe-nav-link"
+                        >
+                          Transiction Details
+                        </a>
+                      </li>
+                      <li class="pe-slide-item">
+                        <a
+                          href="apps-credit-card-invoices.html"
+                          class="pe-nav-link"
+                        >
+                          Invoices
+                        </a>
+                      </li>
+                      <li class="pe-slide-item">
+                        <a
+                          href="apps-credit-card-wallet.html"
+                          class="pe-nav-link"
+                        >
+                          My Wallet
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="pe-slide-item pe-has-sub">
+                    <a
+                      href="#collapseRestaurant"
+                      class="pe-nav-link"
+                      data-bs-toggle="collapse"
+                      aria-expanded="false"
+                      aria-controls="collapseRestaurant"
+                    >
+                      <span class="pe-nav-sub-content">Restaurant</span>
+                      <i
+                        class="ri-arrow-right-s-line pe-nav-arrow arrow-right"
+                      ></i>
+                      <i
+                        class="ri-arrow-left-s-line pe-nav-arrow arrow-left"
+                      ></i>
+                    </a>
+                    <ul class="pe-slide-menu collapse" id="collapseRestaurant">
+                      <li class="pe-slide-item">
+                        <a
+                          href="apps-restaurant-menu-list.html"
+                          class="pe-nav-link"
+                        >
+                          Menu List
+                        </a>
+                      </li>
+                      <li class="pe-slide-item">
+                        <a
+                          href="apps-restaurant-order-list.html"
+                          class="pe-nav-link"
+                        >
+                          Order List
+                        </a>
+                      </li>
+                      <li class="pe-slide-item">
+                        <a
+                          href="apps-restaurant-order-details.html"
+                          class="pe-nav-link"
+                        >
+                          Order Details
+                        </a>
+                      </li>
+                      <li class="pe-slide-item">
+                        <a
+                          href="apps-restaurant-table-manage.html"
+                          class="pe-nav-link"
+                        >
+                          Table Manage
+                        </a>
+                      </li>
+                      <li class="pe-slide-item">
+                        <a
+                          href="apps-restaurant-customer-feedback.html"
+                          class="pe-nav-link"
+                        >
+                          Customers Feedback
+                        </a>
+                      </li>
+                      <li class="pe-slide-item">
+                        <a
+                          href="apps-restaurant-analytics.html"
+                          class="pe-nav-link"
+                        >
+                          Analytics
+                        </a>
+                      </li>
+                      <li class="pe-slide-item">
+                        <a
+                          href="apps-restaurant-customer-pos-system.html"
+                          class="pe-nav-link"
+                        >
+                          POS System
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="pe-slide-item pe-has-sub">
+                    <a
+                      href="#collapseHotel"
+                      class="pe-nav-link"
+                      data-bs-toggle="collapse"
+                      aria-expanded="false"
+                      aria-controls="collapseHotel"
+                    >
+                      <span class="pe-nav-sub-content">Hotel</span>
+                      <i
+                        class="ri-arrow-right-s-line pe-nav-arrow arrow-right"
+                      ></i>
+                      <i
+                        class="ri-arrow-left-s-line pe-nav-arrow arrow-left"
+                      ></i>
+                    </a>
+                    <ul class="pe-slide-menu collapse" id="collapseHotel">
+                      <li class="pe-slide-item">
+                        <a href="apps-hotel-room-list.html" class="pe-nav-link">
+                          Room List
+                        </a>
+                      </li>
+                      <li class="pe-slide-item">
+                        <a
+                          href="apps-hotel-room-details.html"
+                          class="pe-nav-link"
+                        >
+                          Room Details
+                        </a>
+                      </li>
+                      <li class="pe-slide-item">
+                        <a
+                          href="apps-hotel-booking-list.html"
+                          class="pe-nav-link"
+                        >
+                          Booking List
+                        </a>
+                      </li>
+                      <li class="pe-slide-item">
+                        <a
+                          href="apps-hotel-guest-list.html"
+                          class="pe-nav-link"
+                        >
+                          Guest List
+                        </a>
+                      </li>
+                      <li class="pe-slide-item">
+                        <a
+                          href="apps-hotel-guest-profile.html"
+                          class="pe-nav-link"
+                        >
+                          Guest Profile
+                        </a>
+                      </li>
+                      <li class="pe-slide-item">
+                        <a
+                          href="apps-hotel-accounting.html"
+                          class="pe-nav-link"
+                        >
+                          Accounting
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <!-- Pages -->
+              <li class="pe-menu-title">Pages</li>
+              <li class="pe-slide pe-has-sub">
+                <a
+                  href="#collapseAuth"
+                  class="pe-nav-link"
+                  data-bs-toggle="collapse"
+                  aria-expanded="false"
+                  aria-controls="collapseAuth"
+                >
+                  <i class="uil uil-user-square pe-nav-icon"></i>
+                  <span class="pe-nav-content">Authentication</span>
+                  <i class="ri-arrow-right-s-line pe-nav-arrow arrow-right"></i>
+                  <i class="ri-arrow-left-s-line pe-nav-arrow arrow-left"></i>
+                </a>
+                <ul class="pe-slide-menu collapse" id="collapseAuth">
+                  <li class="slide pe-nav-content1">
+                    <a href="javascript:void(0)">Authentication</a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="auth-signin.html" class="pe-nav-link"> Sign in </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="auth-signup.html" class="pe-nav-link">
+                      Register
+                    </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="auth-forgot-password.html" class="pe-nav-link">
+                      Forgot Password
+                    </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="auth-two-step-verify.html" class="pe-nav-link">
+                      Two Step Verification
+                    </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="auth-reset-password.html" class="pe-nav-link">
+                      Reset Password
+                    </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="auth-email-verify.html" class="pe-nav-link">
+                      Email Verification
+                    </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="auth-signout.html" class="pe-nav-link">
+                      Sign out
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="pe-slide pe-has-sub">
+                <a
+                  href="#collapsePages"
+                  class="pe-nav-link"
+                  data-bs-toggle="collapse"
+                  aria-expanded="false"
+                  aria-controls="collapsePages"
+                >
+                  <i class="uil uil-newspaper pe-nav-icon"></i>
+                  <span class="pe-nav-content">Pages</span>
+                  <i class="ri-arrow-right-s-line pe-nav-arrow arrow-right"></i>
+                  <i class="ri-arrow-left-s-line pe-nav-arrow arrow-left"></i>
+                </a>
+                <ul class="pe-slide-menu collapse" id="collapsePages">
+                  <li class="slide pe-nav-content1">
+                    <a href="javascript:void(0)">Pages</a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="pages-starter.html" class="pe-nav-link">
+                      Starter Page
+                    </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="pages-profile.html" class="pe-nav-link">
+                      Profile
+                    </a>
+                  </li>
+                  <li class="pe-slide-item pe-has-sub">
+                    <a
+                      href="#collapseBlogs"
+                      class="pe-nav-link"
+                      data-bs-toggle="collapse"
+                      aria-expanded="false"
+                      aria-controls="collapseBlogs"
+                    >
+                      <span class="pe-nav-sub-content">Blogs</span>
+                      <i
+                        class="ri-arrow-right-s-line pe-nav-arrow arrow-right"
+                      ></i>
+                      <i
+                        class="ri-arrow-left-s-line pe-nav-arrow arrow-left"
+                      ></i>
+                    </a>
+                    <ul class="pe-slide-menu collapse" id="collapseBlogs">
+                      <li class="slide pe-nav-content1">
+                        <a href="javascript:void(0)">Blog</a>
+                      </li>
+                      <li class="pe-slide-item">
+                        <a href="pages-blog-list.html" class="pe-nav-link">
+                          Blog List
+                        </a>
+                      </li>
+                      <li class="pe-slide-item">
+                        <a href="pages-blog-details.html" class="pe-nav-link">
+                          Blog Details
+                        </a>
+                      </li>
+                      <li class="pe-slide-item">
+                        <a href="pages-blog-create.html" class="pe-nav-link">
+                          Create Blog
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="pages-pricing.html" class="pe-nav-link">
+                      Pricing
+                    </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="pages-privacy-policy.html" class="pe-nav-link">
+                      Privacy Policy
+                    </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="pages-terms-conditions.html" class="pe-nav-link">
+                      Terms & Conditions
+                    </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="pages-timeline.html" class="pe-nav-link">
+                      Timeline
+                    </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="pages-faqs.html" class="pe-nav-link"> FAQs </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a
+                      href="pages-billing-subscription.html"
+                      class="pe-nav-link"
+                    >
+                      Billing & Subscription
+                    </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="not-authorize.html" class="pe-nav-link">
+                      Not Authorized
+                    </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="coming-soon.html" class="pe-nav-link">
+                      Comming Soon
+                    </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="under-maintenance.html" class="pe-nav-link">
+                      Maintenance
+                    </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="error.html" class="pe-nav-link"> Error </a>
+                  </li>
+                </ul>
+              </li>
+              <!-- Components -->
+              <li class="pe-menu-title">Components</li>
+              <li class="pe-slide pe-has-sub">
+                <a
+                  href="#collapseBaseUI"
+                  class="pe-nav-link"
+                  data-bs-toggle="collapse"
+                  aria-expanded="false"
+                  aria-controls="collapseBaseUI"
+                >
+                  <i class="uil uil-layers pe-nav-icon"></i>
+                  <span class="pe-nav-content">Base UI</span>
+                  <i class="ri-arrow-right-s-line pe-nav-arrow arrow-right"></i>
+                  <i class="ri-arrow-left-s-line pe-nav-arrow arrow-left"></i>
+                </a>
+                <ul class="pe-slide-menu collapse" id="collapseBaseUI">
+                  <li class="slide pe-nav-content1">
+                    <a href="javascript:void(0)">Base UI</a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-accordions.html" class="pe-nav-link"
+                      >Accordions</a
+                    >
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-alerts.html" class="pe-nav-link">Alert</a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-avatars.html" class="pe-nav-link">Avatar</a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-badges.html" class="pe-nav-link">Badge</a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-breadcrumbs.html" class="pe-nav-link"
+                      >Breadcrumb</a
+                    >
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-buttons.html" class="pe-nav-link">Buttons</a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-button-group.html" class="pe-nav-link"
+                      >Button Group</a
+                    >
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-card.html" class="pe-nav-link">Cards</a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-cookie.html" class="pe-nav-link">Cookie</a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-carousel.html" class="pe-nav-link">Carousel</a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-dropdowns.html" class="pe-nav-link">Dropdown</a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-images-figures.html" class="pe-nav-link"
+                      >Images & Figures</a
+                    >
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-links.html" class="pe-nav-link">Links</a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-list.html" class="pe-nav-link">List Group</a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-tabs.html" class="pe-nav-link">Nav & Tabs</a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-pagination.html" class="pe-nav-link"
+                      >Pagination</a
+                    >
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-popover.html" class="pe-nav-link">Popovers</a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-progress.html" class="pe-nav-link">Progress</a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-spinner.html" class="pe-nav-link">Spinners</a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-separator.html" class="pe-nav-link"
+                      >Separator</a
+                    >
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-modal.html" class="pe-nav-link">Modal</a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-offcanvas.html" class="pe-nav-link"
+                      >Offcanvas</a
+                    >
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-placeholders.html" class="pe-nav-link"
+                      >Placeholders</a
+                    >
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-toast.html" class="pe-nav-link">Toasts</a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-tooltips.html" class="pe-nav-link">Tooltips</a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-typography.html" class="pe-nav-link"
+                      >Typography</a
+                    >
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-utilities.html" class="pe-nav-link"
+                      >Utilities</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="pe-slide pe-has-sub">
+                <a
+                  href="#collapseAdvancedUI"
+                  class="pe-nav-link"
+                  data-bs-toggle="collapse"
+                  aria-expanded="false"
+                  aria-controls="collapseAdvancedUI"
+                >
+                  <i class="uil uil-band-aid pe-nav-icon"></i>
+                  <span class="pe-nav-content">Advanced UI</span>
+                  <i class="ri-arrow-right-s-line pe-nav-arrow arrow-right"></i>
+                  <i class="ri-arrow-left-s-line pe-nav-arrow arrow-left"></i>
+                </a>
+                <ul class="pe-slide-menu collapse" id="collapseAdvancedUI">
+                  <li class="slide pe-nav-content1">
+                    <a href="javascript:void(0)">Advanced UI</a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-block.html" class="pe-nav-link">Block</a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-countup.html" class="pe-nav-link">Count Up</a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-draggable-cards.html" class="pe-nav-link"
+                      >Draggable Cards</a
+                    >
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-media-player.html" class="pe-nav-link"
+                      >Media Player</a
+                    >
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-ratings.html" class="pe-nav-link">Rating</a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-ribbons.html" class="pe-nav-link">Ribbons</a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-scrollspy.html" class="pe-nav-link"
+                      >Scroll Spy</a
+                    >
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-sortable-js.html" class="pe-nav-link"
+                      >Sortable JS</a
+                    >
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-sweetalert2.html" class="pe-nav-link"
+                      >Sweet Alert</a
+                    >
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-advance-swiper.html" class="pe-nav-link"
+                      >Swiper JS</a
+                    >
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-tour.html" class="pe-nav-link">Tour</a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-treeview.html" class="pe-nav-link">Tree View</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="pe-slide pe-has-sub">
+                <a
+                  href="#collapseFroms"
+                  class="pe-nav-link"
+                  data-bs-toggle="collapse"
+                  aria-expanded="false"
+                  aria-controls="collapseFroms"
+                >
+                  <i class="uil uil-notes pe-nav-icon"></i>
+                  <span class="pe-nav-content">Forms</span>
+                  <i class="ri-arrow-right-s-line pe-nav-arrow arrow-right"></i>
+                  <i class="ri-arrow-left-s-line pe-nav-arrow arrow-left"></i>
+                </a>
+                <ul class="pe-slide-menu collapse" id="collapseFroms">
+                  <li class="slide pe-nav-content1">
+                    <a href="javascript:void(0)">Forms</a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-form-elements.html" class="pe-nav-link">
+                      Input
+                    </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-form-checkboxs-radios.html" class="pe-nav-link">
+                      Checkbox & Radios
+                    </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-form-input-group.html" class="pe-nav-link">
+                      Inout Group
+                    </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-form-select.html" class="pe-nav-link">
+                      Form Select
+                    </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-form-range.html" class="pe-nav-link">
+                      Range Slider
+                    </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-form-input-spin.html" class="pe-nav-link">
+                      Input Spin
+                    </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-form-input-masks.html" class="pe-nav-link">
+                      Input Masks
+                    </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-form-file-uploads.html" class="pe-nav-link">
+                      File Uploads
+                    </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-date-picker.html" class="pe-nav-link">
+                      Date,Time Picker
+                    </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-floating-labels.html" class="pe-nav-link"
+                      >Floating Label</a
+                    >
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-form-layout.html" class="pe-nav-link"
+                      >Form Layout</a
+                    >
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-form-editor.html" class="pe-nav-link">Editor</a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-tagify.html" class="pe-nav-link">Tagify</a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-form-validation.html" class="pe-nav-link"
+                      >Form Validation</a
+                    >
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-form-wizards.html" class="pe-nav-link"
+                      >Form Wizards</a
+                    >
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-form-advanced.html" class="pe-nav-link"
+                      >Form Advanced</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="pe-slide pe-has-sub">
+                <a
+                  href="#collapseTables"
+                  class="pe-nav-link"
+                  data-bs-toggle="collapse"
+                  aria-expanded="false"
+                  aria-controls="collapseTables"
+                >
+                  <i class="uil uil-table pe-nav-icon"></i>
+                  <span class="pe-nav-content">Tables</span>
+                  <i class="ri-arrow-right-s-line pe-nav-arrow arrow-right"></i>
+                  <i class="ri-arrow-left-s-line pe-nav-arrow arrow-left"></i>
+                </a>
+                <ul class="pe-slide-menu collapse" id="collapseTables">
+                  <li class="slide pe-nav-content1">
+                    <a href="javascript:void(0)">Tables</a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-tables-basic.html" class="pe-nav-link">
+                      Basic Tables
+                    </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-tables-listjs.html" class="pe-nav-link">
+                      List JS Table
+                    </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-tables-gridjs.html" class="pe-nav-link">
+                      Grid JS Table
+                    </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="ui-tables-datatables.html" class="pe-nav-link">
+                      Datatables
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="pe-slide pe-has-sub">
+                <a
+                  href="#collapseCharts"
+                  class="pe-nav-link"
+                  data-bs-toggle="collapse"
+                  aria-expanded="false"
+                  aria-controls="collapseCharts"
+                >
+                  <i class="uil uil-chart-pie pe-nav-icon"></i>
+                  <span class="pe-nav-content">Charts</span>
+                  <i class="ri-arrow-right-s-line pe-nav-arrow arrow-right"></i>
+                  <i class="ri-arrow-left-s-line pe-nav-arrow arrow-left"></i>
+                </a>
+                <ul class="pe-slide-menu collapse" id="collapseCharts">
+                  <li class="slide pe-nav-content1">
+                    <a href="javascript:void(0)">Charts</a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="chart-apex-line.html" class="pe-nav-link">
+                      Apex Charts
+                    </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="chart-js-chart.html" class="pe-nav-link">
+                      Chartjs Charts
+                    </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="echart-chart.html" class="pe-nav-link">
+                      Echart Charts
+                    </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="chart-high-chart.html" class="pe-nav-link">
+                      High charts
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <!-- Icons & Maps -->
+              <li class="pe-menu-title">Icons & Maps</li>
+              <li class="pe-slide pe-has-sub">
+                <a
+                  href="#collapseIcons"
+                  class="pe-nav-link"
+                  data-bs-toggle="collapse"
+                  aria-expanded="false"
+                  aria-controls="collapseIcons"
+                >
+                  <i class="uil uil-icons pe-nav-icon"></i>
+                  <span class="pe-nav-content">Icons</span>
+                  <i class="ri-arrow-right-s-line pe-nav-arrow arrow-right"></i>
+                  <i class="ri-arrow-left-s-line pe-nav-arrow arrow-left"></i>
+                </a>
+                <ul class="pe-slide-menu collapse" id="collapseIcons">
+                  <li class="slide pe-nav-content1">
+                    <a href="javascript:void(0)">Icons</a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="icons-remix.html" class="pe-nav-link">
+                      Remix Icons
+                    </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="icons-bootstrap.html" class="pe-nav-link">
+                      Bootstrap Icons
+                    </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="icons-boxicon.html" class="pe-nav-link">
+                      Box Icons
+                    </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="icons-unicons.html" class="pe-nav-link">
+                      Unicons Icons
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="pe-slide pe-has-sub">
+                <a
+                  href="#collapseMaps"
+                  class="pe-nav-link"
+                  data-bs-toggle="collapse"
+                  aria-expanded="false"
+                  aria-controls="collapseMaps"
+                >
+                  <i class="uil uil-map-pin-alt pe-nav-icon"></i>
+                  <span class="pe-nav-content">Maps</span>
+                  <i class="ri-arrow-right-s-line pe-nav-arrow arrow-right"></i>
+                  <i class="ri-arrow-left-s-line pe-nav-arrow arrow-left"></i>
+                </a>
+                <ul class="pe-slide-menu collapse" id="collapseMaps">
+                  <li class="slide pe-nav-content1">
+                    <a href="javascript:void(0)">Maps</a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="google-maps.html" class="pe-nav-link">
+                      Google Maps
+                    </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="maps-leaflet.html" class="pe-nav-link">
+                      Leaflet Maps
+                    </a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="maps-vector.html" class="pe-nav-link">
+                      Vector Maps
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <!-- Other -->
+              <li class="pe-menu-title">Other</li>
+              <li class="pe-slide pe-has-sub">
+                <a
+                  href="#collapseMenuLavels"
+                  class="pe-nav-link"
+                  data-bs-toggle="collapse"
+                  aria-expanded="false"
+                  aria-controls="collapseMenuLavels"
+                >
+                  <i class="uil uil-list-ul pe-nav-icon"></i>
+                  <span class="pe-nav-content">Menu levels</span>
+                  <i class="ri-arrow-right-s-line pe-nav-arrow arrow-right"></i>
+                  <i class="ri-arrow-left-s-line pe-nav-arrow arrow-left"></i>
+                </a>
+                <ul class="pe-slide-menu collapse" id="collapseMenuLavels">
+                  <li class="slide pe-nav-content1">
+                    <a href="javascript:void(0)">Menu levels</a>
+                  </li>
+                  <li class="pe-slide-item">
+                    <a href="#!" class="pe-nav-link"> Level 1.1 </a>
+                  </li>
+                  <li class="pe-slide-item pe-has-sub">
+                    <a
+                      href="#collapseMenuLavels2"
+                      class="pe-nav-link"
+                      data-bs-toggle="collapse"
+                      aria-expanded="false"
+                      aria-controls="collapseMenuLavels2"
+                    >
+                      <span class="pe-nav-sub-content">Level 1.2</span>
+                      <i
+                        class="ri-arrow-right-s-line pe-nav-arrow arrow-right"
+                      ></i>
+                      <i
+                        class="ri-arrow-left-s-line pe-nav-arrow arrow-left"
+                      ></i>
+                    </a>
+                    <ul class="pe-slide-menu collapse" id="collapseMenuLavels2">
+                      <li class="slide pe-nav-content1">
+                        <a href="javascript:void(0)">Level 1.2</a>
+                      </li>
+                      <li class="pe-slide-item">
+                        <a href="#!" class="pe-nav-link"> Level 2.1 </a>
+                      </li>
+                      <li class="pe-slide-item">
+                        <a href="#!" class="pe-nav-link"> Level 2.2 </a>
+                      </li>
+                      <li class="pe-slide-item pe-has-sub">
+                        <a
+                          href="#collapseMenuLavels3"
+                          class="pe-nav-link"
+                          data-bs-toggle="collapse"
+                          aria-expanded="false"
+                          aria-controls="collapseMenuLavels3"
+                        >
+                          <span class="pe-nav-sub-content">Level 2.3</span>
+                          <i
+                            class="ri-arrow-right-s-line pe-nav-arrow arrow-right"
+                          ></i>
+                          <i
+                            class="ri-arrow-left-s-line pe-nav-arrow arrow-left"
+                          ></i>
+                        </a>
+                        <ul
+                          class="pe-slide-menu collapse"
+                          id="collapseMenuLavels3"
+                        >
+                          <li class="slide pe-nav-content1">
+                            <a href="javascript:void(0)">Level 2.3</a>
+                          </li>
+                          <li class="pe-slide-item">
+                            <a href="#!" class="pe-nav-link"> Level 3.1 </a>
+                          </li>
+                          <li class="pe-slide-item">
+                            <a href="#!" class="pe-nav-link"> Level 3.2 </a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="pe-slide pe-has-sub">
+                <a href="auth-signout.html" class="pe-nav-link">
+                  <i class="uil uil-sign-out-alt pe-nav-icon"></i>
+                  <span class="pe-nav-content">Log Out</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </aside>
+      <aside class="pe-app-sidebar horizontal-sidebar" id="horizontal-aside">
+        <!-- data-simplebar id="sidebar-simplebar" -->
+        <nav class="pe-app-sidebar-menu nav nav-pills">
+          <ul
+            class="pe-horizontal-menu mb-0 list-unstyled"
+            id="horizontal-menu"
+          >
+            <!-- Main Menu -->
+            <li class="pe-menu-title">Main</li>
+            <li class="pe-slide pe-has-sub">
+              <a
+                href="#collapseDashboards"
+                class="pe-nav-link"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+                aria-controls="collapseDashboards"
+              >
+                <i class="uil uil-tachometer-fast-alt pe-nav-icon"></i>
+                <span class="pe-nav-content">Dashboards</span>
+                <i class="ri-arrow-right-s-line pe-nav-arrow arrow-right"></i>
+                <i class="ri-arrow-left-s-line pe-nav-arrow arrow-left"></i>
+              </a>
+              <ul class="pe-slide-menu collapse" id="collapseDashboards">
+                <li class="pe-slide-item">
+                  <a href="index-2.html" class="pe-nav-link"> Social Media </a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="dashboard-credit-card.html" class="pe-nav-link">
+                    Credit Card
+                  </a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="dashboard-restaurant.html" class="pe-nav-link">
+                    Restaurant
+                  </a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="dashboard-hotel.html" class="pe-nav-link"> Hotel </a>
+                </li>
+              </ul>
+            </li>
+            <li class="pe-slide pe-has-sub">
+              <a
+                href="#collapseApplications"
+                class="pe-nav-link"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+                aria-controls="collapseApplications"
+              >
+                <i class="uil uil-apps pe-nav-icon"></i>
+                <span class="pe-nav-content">Apps</span>
+                <i class="ri-arrow-right-s-line pe-nav-arrow arrow-right"></i>
+                <i class="ri-arrow-left-s-line pe-nav-arrow arrow-left"></i>
+              </a>
+              <ul class="pe-slide-menu collapse" id="collapseApplications">
+                <li class="pe-slide-item">
+                  <a href="apps-calendar.html" class="pe-nav-link">
+                    Calendar
+                  </a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="apps-chat.html" class="pe-nav-link"> Chat </a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="apps-email.html" class="pe-nav-link"> Email </a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="apps-kanban.html" class="pe-nav-link"> Kanban </a>
+                </li>
+                <li class="pe-slide-item pe-has-sub">
+                  <a
+                    href="#collapseSocialMedia"
+                    class="pe-nav-link"
+                    data-bs-toggle="collapse"
+                    aria-expanded="false"
+                    aria-controls="collapseSocialMedia"
+                  >
+                    <span class="pe-nav-sub-content">Social Media</span>
+                    <i
+                      class="ri-arrow-right-s-line pe-nav-arrow arrow-right"
+                    ></i>
+                    <i class="ri-arrow-left-s-line pe-nav-arrow arrow-left"></i>
+                  </a>
+                  <ul class="pe-slide-menu collapse" id="collapseSocialMedia">
+                    <li class="pe-slide-item">
+                      <a href="apps-social-profile.html" class="pe-nav-link">
+                        Profile
+                      </a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="apps-social-activities.html" class="pe-nav-link">
+                        Activities
+                      </a>
+                    </li>
+                    <li class="pe-slide-item pe-has-sub">
+                      <a
+                        href="#collapseFriends"
+                        class="pe-nav-link"
+                        data-bs-toggle="collapse"
+                        aria-expanded="false"
+                        aria-controls="collapseFriends"
+                      >
+                        <span class="pe-nav-sub-content">Friends</span>
+                        <i
+                          class="ri-arrow-right-s-line pe-nav-arrow arrow-right"
+                        ></i>
+                        <i
+                          class="ri-arrow-left-s-line pe-nav-arrow arrow-left"
+                        ></i>
+                      </a>
+                      <ul class="pe-slide-menu collapse" id="collapseFriends">
+                        <li class="pe-slide-item">
+                          <a
+                            href="apps-social-friends.html"
+                            class="pe-nav-link"
+                          >
+                            Friend List
+                          </a>
+                        </li>
+                        <li class="pe-slide-item">
+                          <a
+                            href="apps-social-friend-profile.html"
+                            class="pe-nav-link"
+                          >
+                            Friend Profile
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="pe-slide-item pe-has-sub">
+                      <a
+                        href="#collapseMessages"
+                        class="pe-nav-link"
+                        data-bs-toggle="collapse"
+                        aria-expanded="false"
+                        aria-controls="collapseMessages"
+                      >
+                        <span class="pe-nav-sub-content">Messages</span>
+                        <i
+                          class="ri-arrow-right-s-line pe-nav-arrow arrow-right"
+                        ></i>
+                        <i
+                          class="ri-arrow-left-s-line pe-nav-arrow arrow-left"
+                        ></i>
+                      </a>
+                      <ul class="pe-slide-menu collapse" id="collapseMessages">
+                        <li class="pe-slide-item">
+                          <a href="apps-social-inbox.html" class="pe-nav-link">
+                            Inbox
+                          </a>
+                        </li>
+                        <li class="pe-slide-item">
+                          <a
+                            href="apps-social-compose.html"
+                            class="pe-nav-link"
+                          >
+                            Compose
+                          </a>
+                        </li>
+                        <li class="pe-slide-item">
+                          <a href="apps-social-view.html" class="pe-nav-link">
+                            View
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="apps-social-settings.html" class="pe-nav-link">
+                        Settings
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="pe-slide-item pe-has-sub">
+                  <a
+                    href="#collapseCreditCard"
+                    class="pe-nav-link"
+                    data-bs-toggle="collapse"
+                    aria-expanded="false"
+                    aria-controls="collapseCreditCard"
+                  >
+                    <span class="pe-nav-sub-content">Credit Card</span>
+                    <i
+                      class="ri-arrow-right-s-line pe-nav-arrow arrow-right"
+                    ></i>
+                    <i class="ri-arrow-left-s-line pe-nav-arrow arrow-left"></i>
+                  </a>
+                  <ul class="pe-slide-menu collapse" id="collapseCreditCard">
+                    <li class="pe-slide-item">
+                      <a
+                        href="apps-credit-card-center.html"
+                        class="pe-nav-link"
+                      >
+                        Card Center
+                      </a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a
+                        href="apps-credit-card-transiction.html"
+                        class="pe-nav-link"
+                      >
+                        Transictions
+                      </a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a
+                        href="apps-credit-card-transiction-details.html"
+                        class="pe-nav-link"
+                      >
+                        Transiction Details
+                      </a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a
+                        href="apps-credit-card-invoices.html"
+                        class="pe-nav-link"
+                      >
+                        Invoices
+                      </a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a
+                        href="apps-credit-card-wallet.html"
+                        class="pe-nav-link"
+                      >
+                        My Wallet
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="pe-slide-item pe-has-sub">
+                  <a
+                    href="#collapseRestaurant"
+                    class="pe-nav-link"
+                    data-bs-toggle="collapse"
+                    aria-expanded="false"
+                    aria-controls="collapseRestaurant"
+                  >
+                    <span class="pe-nav-sub-content">Restaurant</span>
+                    <i
+                      class="ri-arrow-right-s-line pe-nav-arrow arrow-right"
+                    ></i>
+                    <i class="ri-arrow-left-s-line pe-nav-arrow arrow-left"></i>
+                  </a>
+                  <ul class="pe-slide-menu collapse" id="collapseRestaurant">
+                    <li class="pe-slide-item">
+                      <a
+                        href="apps-restaurant-menu-list.html"
+                        class="pe-nav-link"
+                      >
+                        Menu List
+                      </a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a
+                        href="apps-restaurant-order-list.html"
+                        class="pe-nav-link"
+                      >
+                        Order List
+                      </a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a
+                        href="apps-restaurant-order-details.html"
+                        class="pe-nav-link"
+                      >
+                        Order Details
+                      </a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a
+                        href="apps-restaurant-table-manage.html"
+                        class="pe-nav-link"
+                      >
+                        Table Manage
+                      </a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a
+                        href="apps-restaurant-customer-feedback.html"
+                        class="pe-nav-link"
+                      >
+                        Customers Feedback
+                      </a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a
+                        href="apps-restaurant-analytics.html"
+                        class="pe-nav-link"
+                      >
+                        Analytics
+                      </a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a
+                        href="apps-restaurant-customer-pos-system.html"
+                        class="pe-nav-link"
+                      >
+                        POS System
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="pe-slide-item pe-has-sub">
+                  <a
+                    href="#collapseHotel"
+                    class="pe-nav-link"
+                    data-bs-toggle="collapse"
+                    aria-expanded="false"
+                    aria-controls="collapseHotel"
+                  >
+                    <span class="pe-nav-sub-content">Hotel</span>
+                    <i
+                      class="ri-arrow-right-s-line pe-nav-arrow arrow-right"
+                    ></i>
+                    <i class="ri-arrow-left-s-line pe-nav-arrow arrow-left"></i>
+                  </a>
+                  <ul class="pe-slide-menu collapse" id="collapseHotel">
+                    <li class="pe-slide-item">
+                      <a href="apps-hotel-room-list.html" class="pe-nav-link">
+                        Room List
+                      </a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a
+                        href="apps-hotel-room-details.html"
+                        class="pe-nav-link"
+                      >
+                        Room Details
+                      </a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a
+                        href="apps-hotel-booking-list.html"
+                        class="pe-nav-link"
+                      >
+                        Booking List
+                      </a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="apps-hotel-guest-list.html" class="pe-nav-link">
+                        Guest List
+                      </a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a
+                        href="apps-hotel-guest-profile.html"
+                        class="pe-nav-link"
+                      >
+                        Guest Profile
+                      </a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="apps-hotel-accounting.html" class="pe-nav-link">
+                        Accounting
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <!-- Pages -->
+            <li class="pe-menu-title">Pages</li>
+            <li class="pe-slide pe-has-sub">
+              <a
+                href="#collapseAuth"
+                class="pe-nav-link"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+                aria-controls="collapseAuth"
+              >
+                <i class="ri-user-line pe-nav-icon"></i>
+                <span class="pe-nav-content">Authentication</span>
+                <i class="ri-arrow-right-s-line pe-nav-arrow arrow-right"></i>
+                <i class="ri-arrow-left-s-line pe-nav-arrow arrow-left"></i>
+              </a>
+              <ul class="pe-slide-menu collapse" id="collapseAuth">
+                <li class="slide pe-nav-content1">
+                  <a href="javascript:void(0)">Authentication</a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="auth-signin.html" class="pe-nav-link"> Sign in </a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="auth-signup.html" class="pe-nav-link"> Register </a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="auth-forgot-password.html" class="pe-nav-link">
+                    Forgot Password
+                  </a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="auth-two-step-verify.html" class="pe-nav-link">
+                    Two Step Verification
+                  </a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="auth-reset-password.html" class="pe-nav-link">
+                    Reset Password
+                  </a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="auth-email-verify.html" class="pe-nav-link">
+                    Email Verification
+                  </a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="auth-signout.html" class="pe-nav-link"> Log out </a>
+                </li>
+              </ul>
+            </li>
+            <li class="pe-slide pe-has-sub">
+              <a
+                href="#collapsePages"
+                class="pe-nav-link"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+                aria-controls="collapsePages"
+              >
+                <i class="ri-pages-line pe-nav-icon"></i>
+                <span class="pe-nav-content">Pages</span>
+                <i class="ri-arrow-right-s-line pe-nav-arrow arrow-right"></i>
+                <i class="ri-arrow-left-s-line pe-nav-arrow arrow-left"></i>
+              </a>
+              <ul class="pe-slide-menu collapse" id="collapsePages">
+                <li class="slide pe-nav-content1">
+                  <a href="javascript:void(0)">Pages</a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="pages-starter.html" class="pe-nav-link">
+                    Starter Page
+                  </a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="pages-profile.html" class="pe-nav-link"> Profile </a>
+                </li>
+                <li class="pe-slide-item pe-has-sub">
+                  <a
+                    href="#collapseBlogs"
+                    class="pe-nav-link"
+                    data-bs-toggle="collapse"
+                    aria-expanded="false"
+                    aria-controls="collapseBlogs"
+                  >
+                    <span class="pe-nav-sub-content">Blogs</span>
+                    <i
+                      class="ri-arrow-right-s-line pe-nav-arrow arrow-right"
+                    ></i>
+                    <i class="ri-arrow-left-s-line pe-nav-arrow arrow-left"></i>
+                  </a>
+                  <ul class="pe-slide-menu collapse" id="collapseBlogs">
+                    <li class="slide pe-nav-content1">
+                      <a href="javascript:void(0)">Blog</a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="pages-blog-list.html" class="pe-nav-link">
+                        Blog List
+                      </a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="pages-blog-details.html" class="pe-nav-link">
+                        Blog Details
+                      </a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="pages-blog-create.html" class="pe-nav-link">
+                        Create Blog
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="pages-pricing.html" class="pe-nav-link"> Pricing </a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="pages-privacy-policy.html" class="pe-nav-link">
+                    Privacy Policy
+                  </a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="pages-terms-conditions.html" class="pe-nav-link">
+                    Terms & Conditions
+                  </a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="pages-timeline.html" class="pe-nav-link">
+                    Timeline
+                  </a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="pages-faqs.html" class="pe-nav-link"> FAQs </a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="pages-billing-subscription.html" class="pe-nav-link">
+                    Billing & Subscription
+                  </a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="not-authorize.html" class="pe-nav-link">
+                    Not Authorized
+                  </a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="coming-soon.html" class="pe-nav-link">
+                    Comming Soon
+                  </a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="under-maintenance.html" class="pe-nav-link">
+                    Maintenance
+                  </a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="error.html" class="pe-nav-link"> Error </a>
+                </li>
+              </ul>
+            </li>
+            <!-- Components -->
+            <li class="pe-menu-title">Components</li>
+            <li class="pe-slide pe-has-sub">
+              <a
+                href="#collapseBaseUI"
+                class="pe-nav-link"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+                aria-controls="collapseBaseUI"
+              >
+                <i class="ri-pencil-ruler-2-line pe-nav-icon"></i>
+                <span class="pe-nav-content">Base UI</span>
+                <i class="ri-arrow-right-s-line pe-nav-arrow arrow-right"></i>
+                <i class="ri-arrow-left-s-line pe-nav-arrow arrow-left"></i>
+              </a>
+              <ul
+                class="pe-slide-menu collapse"
+                id="collapseBaseUI"
+                data-simplebar
+                style="max-height: 550px"
+              >
+                <li class="slide pe-nav-content1">
+                  <a href="javascript:void(0)">Base UI</a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="ui-accordions.html" class="pe-nav-link"
+                    >Accordions</a
+                  >
+                </li>
+                <li class="pe-slide-item">
+                  <a href="ui-alerts.html" class="pe-nav-link">Alert</a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="ui-avatars.html" class="pe-nav-link">Avatar</a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="ui-badges.html" class="pe-nav-link">Badge</a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="ui-breadcrumbs.html" class="pe-nav-link"
+                    >Breadcrumb</a
+                  >
+                </li>
+                <li class="pe-slide-item">
+                  <a href="ui-buttons.html" class="pe-nav-link">Buttons</a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="ui-button-group.html" class="pe-nav-link"
+                    >Button Group</a
+                  >
+                </li>
+                <li class="pe-slide-item">
+                  <a href="ui-card.html" class="pe-nav-link">Cards</a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="ui-cookie.html" class="pe-nav-link">Cookie</a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="ui-carousel.html" class="pe-nav-link">Carousel</a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="ui-dropdowns.html" class="pe-nav-link">Dropdown</a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="ui-images-figures.html" class="pe-nav-link"
+                    >Images & Figures</a
+                  >
+                </li>
+                <li class="pe-slide-item">
+                  <a href="ui-links.html" class="pe-nav-link">Links</a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="ui-list.html" class="pe-nav-link">List Group</a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="ui-tabs.html" class="pe-nav-link">Nav & Tabs</a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="ui-pagination.html" class="pe-nav-link"
+                    >Pagination</a
+                  >
+                </li>
+                <li class="pe-slide-item">
+                  <a href="ui-popover.html" class="pe-nav-link">Popovers</a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="ui-progress.html" class="pe-nav-link">Progress</a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="ui-spinner.html" class="pe-nav-link">Spinners</a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="ui-separator.html" class="pe-nav-link">Separator</a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="ui-modal.html" class="pe-nav-link">Modal</a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="ui-offcanvas.html" class="pe-nav-link">Off Canvas</a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="ui-placeholders.html" class="pe-nav-link"
+                    >Placeholders</a
+                  >
+                </li>
+                <li class="pe-slide-item">
+                  <a href="ui-toast.html" class="pe-nav-link">Toasts</a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="ui-tooltips.html" class="pe-nav-link">Tooltips</a>
+                </li>
+                <li class="pe-slide-item">
+                  <a href="ui-typography.html" class="pe-nav-link"
+                    >Typography</a
+                  >
+                </li>
+                <li class="pe-slide-item">
+                  <a href="ui-utilities.html" class="pe-nav-link">Utilities</a>
+                </li>
+              </ul>
+            </li>
+            <li class="pe-slide pe-has-sub">
+              <a
+                href="#collapseMore"
+                class="pe-nav-link"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+                aria-controls="collapseMore"
+              >
+                <i class="ri-color-filter-ai-line pe-nav-icon"></i>
+                <span class="pe-nav-content">More</span>
+                <i class="ri-arrow-right-s-line pe-nav-arrow arrow-right"></i>
+                <i class="ri-arrow-left-s-line pe-nav-arrow arrow-left"></i>
+              </a>
+              <ul class="pe-slide-menu collapse" id="collapseMore">
+                <li class="pe-slide-item pe-has-sub">
+                  <a
+                    href="#collapseAdvancedUI"
+                    class="pe-nav-link"
+                    data-bs-toggle="collapse"
+                    aria-expanded="false"
+                    aria-controls="collapseAdvancedUI"
+                  >
+                    <span class="pe-nav-sub-content">Advanced UI</span>
+                    <i
+                      class="ri-arrow-right-s-line pe-nav-arrow arrow-right"
+                    ></i>
+                    <i class="ri-arrow-left-s-line pe-nav-arrow arrow-left"></i>
+                  </a>
+                  <ul class="pe-slide-menu collapse" id="collapseAdvancedUI">
+                    <li class="pe-slide-item">
+                      <a href="ui-block.html" class="pe-nav-link">Block</a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="ui-countup.html" class="pe-nav-link">Count Up</a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="ui-draggable-cards.html" class="pe-nav-link"
+                        >Draggable Cards</a
+                      >
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="ui-media-player.html" class="pe-nav-link"
+                        >Media Player</a
+                      >
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="ui-ratings.html" class="pe-nav-link">Rating</a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="ui-ribbons.html" class="pe-nav-link">Ribbons</a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="ui-scrollspy.html" class="pe-nav-link"
+                        >Scroll Spy</a
+                      >
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="ui-sortable-js.html" class="pe-nav-link"
+                        >Sortable JS</a
+                      >
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="ui-sweetalert2.html" class="pe-nav-link"
+                        >Sweet Alert</a
+                      >
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="ui-advance-swiper.html" class="pe-nav-link"
+                        >Swiper JS</a
+                      >
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="ui-tour.html" class="pe-nav-link">Tour</a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="ui-treeview.html" class="pe-nav-link"
+                        >Tree View</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="pe-slide-item pe-has-sub">
+                  <a
+                    href="#collapseForms"
+                    class="pe-nav-link"
+                    data-bs-toggle="collapse"
+                    aria-expanded="false"
+                    aria-controls="collapseForms"
+                  >
+                    <span class="pe-nav-sub-content">Forms</span>
+                    <i
+                      class="ri-arrow-right-s-line pe-nav-arrow arrow-right"
+                    ></i>
+                    <i class="ri-arrow-left-s-line pe-nav-arrow arrow-left"></i>
+                  </a>
+                  <ul class="pe-slide-menu collapse" id="collapseForms">
+                    <li class="slide pe-nav-content1">
+                      <a href="javascript:void(0)">Forms</a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="ui-form-elements.html" class="pe-nav-link">
+                        Input
+                      </a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a
+                        href="ui-form-checkboxs-radios.html"
+                        class="pe-nav-link"
+                      >
+                        Checkbox & Radios
+                      </a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="ui-form-input-group.html" class="pe-nav-link">
+                        Inout Group
+                      </a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="ui-form-select.html" class="pe-nav-link">
+                        Form Select
+                      </a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="ui-form-range.html" class="pe-nav-link">
+                        Range Slider
+                      </a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="ui-form-input-spin.html" class="pe-nav-link">
+                        Input Spin
+                      </a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="ui-form-input-masks.html" class="pe-nav-link">
+                        Input Masks
+                      </a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="ui-form-file-uploads.html" class="pe-nav-link">
+                        File Uploads
+                      </a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="ui-date-picker.html" class="pe-nav-link">
+                        Date,Time Picker
+                      </a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="ui-floating-labels.html" class="pe-nav-link"
+                        >Floating Label</a
+                      >
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="ui-form-layout.html" class="pe-nav-link"
+                        >Form Layout</a
+                      >
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="ui-form-editor.html" class="pe-nav-link"
+                        >Editor</a
+                      >
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="ui-tagify.html" class="pe-nav-link">Tagify</a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="ui-form-validation.html" class="pe-nav-link"
+                        >Form Validation</a
+                      >
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="ui-form-wizards.html" class="pe-nav-link"
+                        >Form Wizards</a
+                      >
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="ui-form-advanced.html" class="pe-nav-link"
+                        >Form Advanced</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="pe-slide-item pe-has-sub">
+                  <a
+                    href="#collapseTables"
+                    class="pe-nav-link"
+                    data-bs-toggle="collapse"
+                    aria-expanded="false"
+                    aria-controls="collapseTables"
+                  >
+                    <span class="pe-nav-sub-content">Tables</span>
+                    <i
+                      class="ri-arrow-right-s-line pe-nav-arrow arrow-right"
+                    ></i>
+                    <i class="ri-arrow-left-s-line pe-nav-arrow arrow-left"></i>
+                  </a>
+                  <ul class="pe-slide-menu collapse" id="collapseTables">
+                    <li class="slide pe-nav-content1">
+                      <a href="javascript:void(0)">Tables</a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="ui-tables-basic.html" class="pe-nav-link">
+                        Basic Tables
+                      </a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="ui-tables-listjs.html" class="pe-nav-link">
+                        List JS Table
+                      </a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="ui-tables-gridjs.html" class="pe-nav-link">
+                        Grid JS Table
+                      </a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="ui-tables-datatables.html" class="pe-nav-link">
+                        Datatables
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="pe-slide-item pe-has-sub">
+                  <a
+                    href="#collapseCharts"
+                    class="pe-nav-link"
+                    data-bs-toggle="collapse"
+                    aria-expanded="false"
+                    aria-controls="collapseCharts"
+                  >
+                    <span class="pe-nav-sub-content">Charts</span>
+                    <i
+                      class="ri-arrow-right-s-line pe-nav-arrow arrow-right"
+                    ></i>
+                    <i class="ri-arrow-left-s-line pe-nav-arrow arrow-left"></i>
+                  </a>
+                  <ul class="pe-slide-menu collapse" id="collapseCharts">
+                    <li class="slide pe-nav-content1">
+                      <a href="javascript:void(0)">Charts</a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="chart-apex-line.html" class="pe-nav-link">
+                        Apex Charts
+                      </a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="chart-js-chart.html" class="pe-nav-link">
+                        Chartjs Charts
+                      </a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="echart-chart.html" class="pe-nav-link">
+                        Echart Charts
+                      </a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="chart-high-chart.html" class="pe-nav-link">
+                        High charts
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="pe-slide-item pe-has-sub">
+                  <a
+                    href="#collapseIcons"
+                    class="pe-nav-link"
+                    data-bs-toggle="collapse"
+                    aria-expanded="false"
+                    aria-controls="collapseIcons"
+                  >
+                    <span class="pe-nav-sub-content">Icons</span>
+                    <i
+                      class="ri-arrow-right-s-line pe-nav-arrow arrow-right"
+                    ></i>
+                    <i class="ri-arrow-left-s-line pe-nav-arrow arrow-left"></i>
+                  </a>
+                  <ul class="pe-slide-menu collapse" id="collapseIcons">
+                    <li class="slide pe-nav-content1">
+                      <a href="javascript:void(0)">Icons</a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="icons-remix.html" class="pe-nav-link">
+                        Remix Icons
+                      </a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="icons-bootstrap.html" class="pe-nav-link">
+                        Bootstrap Icons
+                      </a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="icons-boxicon.html" class="pe-nav-link">
+                        Box Icons
+                      </a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="icons-unicons.html" class="pe-nav-link">
+                        Unicons Icons
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="pe-slide-item pe-has-sub">
+                  <a
+                    href="#collapseMaps"
+                    class="pe-nav-link"
+                    data-bs-toggle="collapse"
+                    aria-expanded="false"
+                    aria-controls="collapseMaps"
+                  >
+                    <span class="pe-nav-sub-content">Maps</span>
+                    <i
+                      class="ri-arrow-right-s-line pe-nav-arrow arrow-right"
+                    ></i>
+                    <i class="ri-arrow-left-s-line pe-nav-arrow arrow-left"></i>
+                  </a>
+                  <ul class="pe-slide-menu collapse" id="collapseMaps">
+                    <li class="slide pe-nav-content1">
+                      <a href="javascript:void(0)">Maps</a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="google-maps.html" class="pe-nav-link">
+                        Google Maps
+                      </a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="maps-leaflet.html" class="pe-nav-link">
+                        Leaflet Maps
+                      </a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="maps-vector.html" class="pe-nav-link">
+                        Vector Maps
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="pe-slide-item pe-has-sub">
+                  <a
+                    href="#collapseMenulevels"
+                    class="pe-nav-link"
+                    data-bs-toggle="collapse"
+                    aria-expanded="false"
+                    aria-controls="collapseMenulevels"
+                  >
+                    <span class="pe-nav-sub-content">Menu levels</span>
+                    <i
+                      class="ri-arrow-right-s-line pe-nav-arrow arrow-right"
+                    ></i>
+                    <i class="ri-arrow-left-s-line pe-nav-arrow arrow-left"></i>
+                  </a>
+                  <ul class="pe-slide-menu collapse" id="collapseMenuLavels">
+                    <li class="slide pe-nav-content1">
+                      <a href="javascript:void(0)">Menu levels</a>
+                    </li>
+                    <li class="pe-slide-item">
+                      <a href="#!" class="pe-nav-link"> Level 1.1 </a>
+                    </li>
+                    <li class="pe-slide-item pe-has-sub">
+                      <a
+                        href="#collapseMenuLavels2"
+                        class="pe-nav-link"
+                        data-bs-toggle="collapse"
+                        aria-expanded="false"
+                        aria-controls="collapseMenuLavels2"
+                      >
+                        <span class="pe-nav-sub-content">Level 1.2</span>
+                        <i
+                          class="ri-arrow-right-s-line pe-nav-arrow arrow-right"
+                        ></i>
+                        <i
+                          class="ri-arrow-left-s-line pe-nav-arrow arrow-left"
+                        ></i>
+                      </a>
+                      <ul
+                        class="pe-slide-menu collapse"
+                        id="collapseMenuLavels2"
+                      >
+                        <li class="slide pe-nav-content1">
+                          <a href="javascript:void(0)">Level 1.2</a>
+                        </li>
+                        <li class="pe-slide-item">
+                          <a href="#!" class="pe-nav-link"> Level 2.1 </a>
+                        </li>
+                        <li class="pe-slide-item">
+                          <a href="#!" class="pe-nav-link"> Level 2.2 </a>
+                        </li>
+                        <li class="pe-slide-item pe-has-sub">
+                          <a
+                            href="#collapseMenuLavels3"
+                            class="pe-nav-link"
+                            data-bs-toggle="collapse"
+                            aria-expanded="false"
+                            aria-controls="collapseMenuLavels3"
+                          >
+                            <span class="pe-nav-sub-content">Level 2.3</span>
+                            <i
+                              class="ri-arrow-right-s-line pe-nav-arrow arrow-right"
+                            ></i>
+                            <i
+                              class="ri-arrow-left-s-line pe-nav-arrow arrow-left"
+                            ></i>
+                          </a>
+                          <ul
+                            class="pe-slide-menu collapse"
+                            id="collapseMenuLavels3"
+                          >
+                            <li class="slide pe-nav-content1">
+                              <a href="javascript:void(0)">Level 2.3</a>
+                            </li>
+                            <li class="pe-slide-item">
+                              <a href="#!" class="pe-nav-link"> Level 3.1 </a>
+                            </li>
+                            <li class="pe-slide-item">
+                              <a href="#!" class="pe-nav-link"> Level 3.2 </a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+      <main class="app-wrapper">
+        <div class="container-fluid">
+          <div
+            class="main-breadcrumb d-flex flex-wrap align-items-center my-4 position-relative gap-3"
+          >
+            <h2 class="breadcrumb-title mb-0 flex-grow-1 fs-16">Card</h2>
+            <div class="flex-shrink-0">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-end mb-0">
+                  <li>
+                    <i class="ri-home-4-line fs-16 me-2 lh-sm text-primary"></i>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="javascript:void(0)">Base UI</a>
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Card
+                  </li>
+                </ol>
+              </nav>
+            </div>
+            <div class="gap-4 content-title d-none">
+              <div class="text-end">
+                <h5 class="mb-2 text-white fs-16">Card</h5>
+                <h6 class="text-opacity-50 text-white fs-14 fw-medium mb-0">
+                  Page Overview
+                </h6>
+              </div>
+              <div
+                class="avatar-item avatar-lg rounded avatar-title text-white bg-white bg-opacity-10 border-0"
+              >
+                <i class="uil uil-layers fs-4"></i>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-xl-3">
+              <div class="card">
+                <img
+                  src="../static/assets/images/small/img-10.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title mb-2">Card title</h5>
+                  <p class="card-text text-muted">
+                    You have received a new message from John Doe regarding your
+                    recent inquiry. He has provided additional details and is
+                    looking forward to your response.
+                  </p>
+                  <a href="javascript:void(0)" class="btn btn-primary"
+                    >Go somewhere</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!--End col-->
+
+            <div class="col-md-6 col-xl-3">
+              <div class="card">
+                <div
+                  class="card-header d-flex justify-content-between align-items-center"
+                >
+                  <h6 class="card-title">New Message</h6>
+                  <div class="dropdown">
+                    <button
+                      class="btn btn-light btn-sm"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                    >
+                      <i class="ri-more-2-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                      <li>
+                        <a class="dropdown-item" href="javascript:void(0)"
+                          >Clear Cache</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="javascript:void(0)"
+                          >Upgrade Storage</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex gap-4 align-items-start mb-4">
+                    <div class="avatar">
+                      <img
+                        src="../static/assets/images/small/img-5.jpg"
+                        alt="User Avatar"
+                        class="avatar-xl rounded object-fit-cover"
+                      />
+                    </div>
+                    <div>
+                      <p class="fw-medium mb-1">John Doe</p>
+                      <p class="text-muted small mb-2">
+                        Regarding your recent inquiry, I wanted to follow up
+                        with additional details. Please let me know if you have
+                        any further.
+                      </p>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" class="btn btn-light-primary"
+                    >Go somewhere</a
+                  >
+                </div>
+                <div class="card-footer bg-light text-end">
+                  <small class="text-muted"
+                    ><i class="ri-time-line me-1"></i> 1 hour ago</small
+                  >
+                </div>
+              </div>
+            </div>
+            <!--End col-->
+
+            <div class="col-md-6 col-xl-3">
+              <div class="card">
+                <div class="card-header">
+                  <h5 class="card-title">Information Card</h5>
+                </div>
+                <div class="card-body">
+                  <img
+                    src="../static/assets/images/small/img-5.jpg"
+                    alt="Card Image"
+                    class="w-100 h-144px object-fit-cover rounded mb-4"
+                  />
+                  <h5 class="card-title mb-3">Important Information</h5>
+                  <p class="card-text text-muted">
+                    Stay updated with the latest trends and news in the tech
+                    industry. Subscribe to our newsletter.
+                  </p>
+                  <a href="javascript:void(0)" class="btn btn-primary"
+                    >Subscribe Now</a
+                  >
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                  <small class="text-muted">Posted 3 days ago</small>
+                  <a href="javascript:void(0)" class="link link-primary"
+                    >Read More<i class="ri-arrow-right-double-line"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!--End col-->
+
+            <div class="col-md-6 col-xl-3">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title mb-3">Web Development Masterclass</h5>
+                  <p class="text-muted">
+                    Learn the latest web development technologies, including
+                    HTML, CSS, JavaScript, and React. Master responsive design,
+                    modern frameworks, to build dynamic, high-performance
+                    websites.
+                  </p>
+
+                  <div class="d-flex justify-content-between">
+                    <div class="d-flex align-items-center gap-2">
+                      <span>Rating: </span>
+                      <div class="rating">
+                        <i class="ri-star-fill text-warning"></i>
+                        <i class="ri-star-fill text-warning"></i>
+                        <i class="ri-star-fill text-warning"></i>
+                        <i class="ri-star-fill text-warning"></i>
+                        <i class="ri-star-line text-muted"></i>
+                      </div>
+                    </div>
+                    <a href="javascript:void(0)" class="btn btn-light-primary"
+                      >Enroll Now</a
+                    >
+                  </div>
+                </div>
+                <div class="card-footer text-end">
+                  <small class="text-muted">Starts October 1, 2024</small>
+                </div>
+              </div>
+            </div>
+            <!--End col-->
+
+            <div class="col-md-6 col-xl-4">
+              <div class="card">
+                <div
+                  class="card-header d-flex justify-content-between align-items-center"
+                >
+                  <h5 class="card-title">Welcome to Our Service</h5>
+                  <button type="button" class="btn btn-light btn-sm">
+                    Action
+                  </button>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Special Offer</h5>
+                  <p class="card-text">
+                    Enjoy a 50% discount on your next purchase. Use the code
+                    below at checkout.
+                  </p>
+                  <a href="javascript:void(0)" class="btn btn-primary"
+                    >Redeem Offer</a
+                  >
+                </div>
+                <div class="card-footer">Offer ends soon!</div>
+              </div>
+            </div>
+            <!--End col-->
+
+            <div class="col-md-6 col-xl-4">
+              <div class="card">
+                <div
+                  class="card-header d-flex justify-content-between align-items-center"
+                >
+                  <h5 class="card-title">Danger Alert</h5>
+                  <button type="button" class="btn btn-outline-danger btn-sm">
+                    <i class="ri-alert-line"></i> Alert
+                  </button>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Critical System Update</h5>
+                  <p class="card-text">
+                    Immediate action is required. Please update your system to
+                    the latest version to avoid security risks.
+                  </p>
+                  <a href="javascript:void(0)" class="btn btn-primary"
+                    >Update Now</a
+                  >
+                </div>
+                <div class="card-footer">Last update: 1 hour ago</div>
+              </div>
+            </div>
+            <!--End col-->
+
+            <div class="col-md-6 col-xl-4">
+              <div class="card">
+                <div
+                  class="card-header d-flex justify-content-between align-items-center"
+                >
+                  <h5 class="card-title">Low Storage Warning</h5>
+                  <div class="dropdown">
+                    <button
+                      class="btn btn-light btn-sm"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                    >
+                      <i class="ri-more-2-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                      <li>
+                        <a class="dropdown-item" href="javascript:void(0)"
+                          >Clear Cache</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="javascript:void(0)"
+                          >Upgrade Storage</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    Your system is running low on storage. Please clear
+                    unnecessary files to avoid performance issues.
+                  </p>
+                  <a href="javascript:void(0)" class="btn btn-primary"
+                    >Fix Now</a
+                  >
+                </div>
+                <div class="card-footer text-muted">
+                  Last checked 30 minutes ago
+                </div>
+              </div>
+            </div>
+            <!--End col-->
+
+            <div class="col-md-6 col-xl-3">
+              <div class="card">
+                <img
+                  src="../static/assets/images/small/img-1.jpg"
+                  class="card-img-top"
+                  alt="Conference"
+                />
+                <div class="card-body">
+                  <p class="card-text text-muted">
+                    Join us for the Annual Tech Conference 2024 to explore the
+                    latest trends and innovations in technology.
+                  </p>
+                  <a href="javascript:void(0)" class="btn btn-primary"
+                    >Register Now</a
+                  >
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">An item</li>
+                  <li class="list-group-item">A second item</li>
+                </ul>
+              </div>
+            </div>
+            <!--End col-->
+
+            <div class="col-md-6 col-xl-3">
+              <div class="card">
+                <div class="card-header">
+                  <h5 class="card-title">Success Card with Image</h5>
+                </div>
+                <img
+                  src="../static/assets/images/small/img-2.jpg"
+                  alt="Success image"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Achievement Unlocked</h5>
+                  <p class="card-text">
+                    Congratulations! You have successfully completed the course.
+                  </p>
+                  <a href="javascript:void(0)" class="btn btn-primary"
+                    >View Certificate</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!--End col-->
+
+            <div class="col-md-6 col-xl-3">
+              <div class="card">
+                <div class="card-body text-center p-4 rounded">
+                  <div class="avatar-item d-flex mx-auto w-max border-primary">
+                    <img
+                      class="img-fluid avatar-xl"
+                      src="../static/assets/images/avatar/avatar-3.jpg"
+                      alt="avatar image"
+                    />
+                  </div>
+                  <h5 class="card-title mt-3">Jane Doe</h5>
+                  <p class="card-text text-muted">
+                    Frontend Developer at <strong>XYZ Corp</strong>
+                  </p>
+                  <div class="skills mb-3">
+                    <strong>✨ Skills:</strong>
+                    <ul
+                      class="list-unstyled d-flex justify-content-center flex-wrap mt-2"
+                    >
+                      <li class="badge bg-info me-1">HTML</li>
+                      <li class="badge bg-info me-1">CSS</li>
+                      <li class="badge bg-info me-1">JavaScript</li>
+                      <li class="badge bg-info me-1">React</li>
+                      <li class="badge bg-info me-1">Angular</li>
+                    </ul>
+                  </div>
+                  <p class="card-text">
+                    <strong>📍 Location:</strong> San Francisco, CA
+                  </p>
+                  <p class="card-text">
+                    <strong>💼 Experience:</strong> 5 years of crafting stunning
+                    web experiences.
+                  </p>
+                  <p class="card-text">
+                    <strong>🎓 Education:</strong> B.S. in Computer Science from
+                    Stanford University
+                  </p>
+                  <div class="d-flex justify-content-center mt-5">
+                    <a href="#!" class="btn btn-light me-2">Connect</a>
+                    <a href="#!" class="btn btn-light-primary"
+                      >View Portfolio</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--End col-->
+
+            <div class="col-md-6 col-xl-3">
+              <div class="card">
+                <img
+                  src="../static/assets/images/small/img-3.jpg"
+                  class="card-img-top"
+                  alt="Product Image"
+                />
+                <div class="card-body">
+                  <h5 class="card-title mb-3">New Smartphone</h5>
+                  <p class="card-text text-muted">
+                    The latest smartphone with cutting-edge technology, 5G
+                    support, and an ultra-clear display.
+                  </p>
+                  <a href="javascript:void(0)" class="btn btn-primary"
+                    >Buy Now</a
+                  >
+                </div>
+                <div class="card-footer text-muted">Only 5 left in stock!</div>
+              </div>
+            </div>
+            <!--End col-->
+
+            <div class="col-md-6 col-xl-4">
+              <div class="card">
+                <img
+                  src="../static/assets/images/small/img-4.jpg"
+                  class="card-img-top"
+                  alt="Product Image"
+                />
+                <div
+                  class="card-header d-flex justify-content-between align-items-center"
+                >
+                  <h5 class="card-title">New Smartphone</h5>
+                  <div class="dropdown">
+                    <button
+                      class="btn btn-light btn-sm"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                    >
+                      <i class="ri-more-2-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                      <li>
+                        <a class="dropdown-item" href="javascript:void(0)"
+                          >Add to Wishlist</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="javascript:void(0)"
+                          >Compare</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    The latest smartphone with 5G support, an ultra-clear
+                    display, and a powerful processor.
+                  </p>
+                  <a href="javascript:void(0)" class="btn btn-primary"
+                    >Buy Now</a
+                  >
+                </div>
+                <div class="card-footer text-muted">Only 3 left in stock!</div>
+              </div>
+            </div>
+            <!--End col-->
+
+            <div class="col-md-6 col-xl-4">
+              <div class="card card-h-100">
+                <div
+                  id="carouselExample"
+                  class="carousel slide"
+                  data-bs-ride="carousel"
+                >
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img
+                        src="../static/assets/images/small/img-5.jpg"
+                        class="d-block w-100"
+                        alt="Product Image 1"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="../static/assets/images/small/img-6.jpg"
+                        class="d-block w-100"
+                        alt="Product Image 2"
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselExample"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselExample"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                  </button>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title mb-3">Smartphone X</h5>
+                  <p class="card-text text-muted">
+                    Latest model, ultra-clear display, and 5G support. Equipped
+                    with a powerful processor for seamless performance and an
+                    advanced camera system for stunning photos. Enjoy an
+                    immersive experience with a high refresh rate screen and
+                    long-lasting battery life.
+                  </p>
+                  <a href="javascript:void(0)" class="btn btn-primary"
+                    >Buy Now</a
+                  >
+                </div>
+                <div class="card-footer">
+                  <div class="progress mb-3">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      style="width: 60%"
+                      aria-valuenow="60"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      60% Sold
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--End col-->
+
+            <div class="col-md-6 col-xl-4">
+              <div class="card card-h-100 blog-post-extended">
+                <img
+                  src="../static/assets/images/small/img-14.jpg"
+                  class="card-img-top"
+                  alt="Blog Image"
+                />
+                <div class="card-body">
+                  <h5 class="card-title mb-3">
+                    10 Tips to Improve Your Coding Skills
+                  </h5>
+                  <p class="card-text text-muted">
+                    Learn the essential tips for creating visually appealing,
+                    user-friendly, and highly functional websites. Master the
+                    principles of modern web design, including responsive
+                    layouts, intuitive navigation, and accessibility best
+                    practices.
+                  </p>
+                </div>
+                <div class="card-footer text-muted">
+                  Published on: <strong>Sept 15, 2024</strong>
+                  <span class="float-end">5 min read</span>
+                </div>
+              </div>
+            </div>
+            <!--End col-->
+
+            <div class="col-md-6 col-xl-4">
+              <div class="card card-h-100 top-rated-card">
+                <div class="card-body">
+                  <img
+                    src="../static/assets/images/small/img-7.jpg"
+                    class="card-img-top mb-3"
+                    alt="Product Image"
+                  />
+                  <h5 class="card-title">Sunset Sound</h5>
+                  <p class="card-text">
+                    Experience the warmth of the sun with these high-quality
+                    noise-canceling headphones, designed to immerse you in
+                    vibrant sound.
+                  </p>
+                  <div class="rating mb-3">
+                    <i class="ri-star-fill text-warning"></i>
+                    <i class="ri-star-fill text-warning"></i>
+                    <i class="ri-star-fill text-warning"></i>
+                    <i class="ri-star-fill text-warning"></i>
+                    <i class="ri-star-line text-muted"></i>
+                    <span class="ms-2">(4.5/5)</span>
+                  </div>
+                  <a href="javascript:void(0)" class="btn btn-primary w-100"
+                    >Buy Now</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!--End col-->
+
+            <div class="col-md-6 col-xl-4">
+              <div class="card card-h-100 service-card-badge">
+                <div
+                  class="card-body d-flex flex-column justify-content-between"
+                >
+                  <div class="mb-3 position-relative">
+                    <span
+                      class="badge bg-primary position-absolute top-0 end-0 mt-4 me-4"
+                      >Top News</span
+                    >
+                    <img
+                      src="../static/assets/images/small/img-8.jpg"
+                      class="card-img-top mb-3"
+                      alt="Service Image"
+                    />
+                    <h5 class="card-title">Beautiful Bridges</h5>
+                    <p class="card-text">
+                      Discover stunning bridges that connect people and places,
+                      showcasing the beauty of design and nature.
+                    </p>
+                  </div>
+                  <a
+                    href="javascript:void(0)"
+                    class="btn btn-light-primary w-100 mt-auto"
+                    >Read More</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!--End col-->
+
+            <div class="col-md-6 col-xl-4">
+              <div class="card text-bg-dark">
+                <img
+                  src="../static/assets/images/small/img-4.jpg"
+                  class="card-img"
+                  alt="..."
+                />
+                <div class="card-img-overlay">
+                  <h5 class="card-title text-reset">Card title</h5>
+                  <p class="card-text">
+                    This is a wider card with supporting text below as a natural
+                    lead-in to additional content. This content is a little bit
+                    longer.
+                  </p>
+                  <p class="card-text">
+                    <small>Last updated 3 mins ago</small>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--End col-->
+            <div class="col-md-6 col-xl-4">
+              <div class="card card-h-100 text-bg-light">
+                <img
+                  src="../static/assets/images/small/img-3.jpg"
+                  class="card-img"
+                  alt="..."
+                />
+                <div class="card-img-overlay">
+                  <h5 class="card-title text-reset">Card title</h5>
+                  <p class="card-text">
+                    This is a wider card with supporting text below as a natural
+                    lead-in to additional content. This content is a little bit
+                    longer.
+                  </p>
+                  <p class="card-text">
+                    <small>Last updated 3 mins ago</small>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--End col-->
+            <div class="col-md-6 col-xl-8">
+              <div class="row row-cols-1 row-cols-md-3 g-0">
+                <div class="col">
+                  <div class="card border-0 rounded-end-0 shadow-sm">
+                    <div class="card-body">
+                      <img
+                        src="../static/assets/images/small/img-7.jpg"
+                        alt="Logo"
+                        class="mx-auto w-100 rounded"
+                      />
+                      <h5 class="card-title mt-4 mb-3">Card Groups</h5>
+                      <p class="card-text text-muted">
+                        This is a wider card supporting text below to content.
+                      </p>
+                      <small class="text-muted">Last updated 3 mins ago</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card border-0 rounded-0 shadow-sm">
+                    <div class="card-body">
+                      <img
+                        src="../static/assets/images/small/img-7.jpg"
+                        alt="Logo"
+                        class="mx-auto w-100 rounded"
+                      />
+                      <h5 class="card-title mt-4 mb-3">Card Groups</h5>
+                      <p class="card-text text-muted">
+                        This is a wider card supporting text below to content.
+                      </p>
+                      <small class="text-muted">Last updated 3 mins ago</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card border-0 rounded-start-0 shadow-sm">
+                    <div class="card-body">
+                      <img
+                        src="../static/assets/images/small/img-7.jpg"
+                        alt="Logo"
+                        class="mx-auto w-100 rounded"
+                      />
+                      <h5 class="card-title mt-4 mb-3">Card Groups</h5>
+                      <p class="card-text text-muted">
+                        This is a wider card supporting text below to content.
+                      </p>
+                      <small class="text-muted">Last updated 3 mins ago</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--End col-->
+          </div>
+          <!--End row-->
+
+          <h5 class="mb-3 text-decoration-underline">Card Colors</h5>
+          <div class="row">
+            <div class="col-md-6 col-xl-3">
+              <div class="card card-primary">
+                <div class="card-header">
+                  <h6 class="card-title text-white">Primary Card</h6>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    You have received a new message from John Doe regarding your
+                    recent inquiry.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--End col-->
+            <div class="col-md-6 col-xl-3">
+              <div class="card card-secondary">
+                <div class="card-header">
+                  <h6 class="card-title text-white">Secondary Card</h6>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    You have received a new message from John Doe regarding your
+                    recent inquiry.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--End col-->
+            <div class="col-md-6 col-xl-3">
+              <div class="card card-success">
+                <div class="card-header">
+                  <h6 class="card-title text-white">Success Card</h6>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    You have received a new message from John Doe regarding your
+                    recent inquiry.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--End col-->
+            <div class="col-md-6 col-xl-3">
+              <div class="card card-info">
+                <div class="card-header">
+                  <h6 class="card-title text-white">Info Card</h6>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    You have received a new message from John Doe regarding your
+                    recent inquiry.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--End col-->
+            <div class="col-md-6 col-xl-3">
+              <div class="card card-warning">
+                <div class="card-header">
+                  <h6 class="card-title text-white">Warning Card</h6>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    You have received a new message from John Doe regarding your
+                    recent inquiry.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--End col-->
+            <div class="col-md-6 col-xl-3">
+              <div class="card card-danger">
+                <div class="card-header">
+                  <h6 class="card-title text-white">Danger Card</h6>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    You have received a new message from John Doe regarding your
+                    recent inquiry.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--End col-->
+            <div class="col-md-6 col-xl-3">
+              <div class="card card-dark">
+                <div class="card-header">
+                  <h6 class="card-title text-white">Dark Card</h6>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    You have received a new message from John Doe regarding your
+                    recent inquiry.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--End col-->
+            <div class="col-md-6 col-xl-3">
+              <div class="card card-light">
+                <div class="card-header">
+                  <h6 class="card-title">Light Card</h6>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    You have received a new message from John Doe regarding your
+                    recent inquiry.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--End col-->
+          </div>
+          <!--End row-->
+        </div>
+        <!--End container-fluid-->
+      </main>
+      <!--End app-wrapper-->
+
+      <button
+        class="btn btn-light-primary rounded-end-0 d-none d-md-inline-flex position-fixed end-0 switcher-btn"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasRight"
+        aria-controls="offcanvasRight"
+        aria-label="Settings"
+      >
+        <i class="ri-settings-3-line fs-19 lh-1 rotate-animation"></i
+        ><span class="fs-16 lh-1">Customize</span>
+      </button>
+      <div
+        class="offcanvas offcanvas-end border-0 data-theme-colors layout-customizer"
+        tabindex="-1"
+        id="offcanvasRight"
+        aria-labelledby="offcanvasRightLabel"
+      >
+        <div class="flex-wrap align-items-center p-5 offcanvas-header">
+          <h6 class="m-0" id="offcanvasRightLabel">Theme Customization</h6>
+          <button
+            type="button"
+            class="btn-close ms-auto"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <div data-simplebar class="h-100 px-5 mx-n5">
+            <h6 class="mb-5 fw-semibold">Layout:</h6>
+            <div class="row gy-3">
+              <div class="col-6">
+                <div class="border overflow-hidden rounded-2">
+                  <input
+                    id="customizer-layout01"
+                    name="data-layout"
+                    type="radio"
+                    value="vertical"
+                    class="form-check-input"
+                    checked
+                  />
+                  <label
+                    class="form-check-label p-0 avatar-3xl w-100 rounded-2"
+                    for="customizer-layout01"
+                  >
+                    <img
+                      src="../static/assets/images/switcher/vertical.png"
+                      alt="Vertical"
+                      class="img-fluid"
+                    />
+                  </label>
+                </div>
+                <h5 class="small mt-2 px-2">Vertical</h5>
+              </div>
+              <div class="col-6">
+                <div class="border overflow-hidden rounded-2">
+                  <input
+                    id="customizer-layout02"
+                    name="data-layout"
+                    type="radio"
+                    value="horizontal"
+                    class="form-check-input"
+                  />
+                  <label
+                    class="form-check-label p-0 avatar-3xl w-100 rounded-2"
+                    for="customizer-layout02"
+                  >
+                    <img
+                      src="../static/assets/images/switcher/horizontal.png"
+                      alt="Horizontal"
+                      class="img-fluid"
+                    />
+                  </label>
+                </div>
+                <h5 class="small mt-2 px-2">Horizontal</h5>
+              </div>
+              <div class="col-6">
+                <div class="border overflow-hidden rounded-2">
+                  <input
+                    id="customizer-layout03"
+                    name="data-layout"
+                    type="radio"
+                    value="semibox"
+                    class="form-check-input"
+                  />
+                  <label
+                    class="form-check-label p-0 avatar-3xl w-100 rounded-2"
+                    for="customizer-layout03"
+                  >
+                    <img
+                      src="../static/assets/images/switcher/semibox.png"
+                      alt="Semi Box"
+                      class="img-fluid"
+                    />
+                  </label>
+                </div>
+                <h5 class="small mt-2 px-2">Semi Box</h5>
+              </div>
+              <!-- end col -->
+            </div>
+
+            <h6 class="my-5 fw-semibold">Content Width:</h6>
+
+            <div class="row gy-3">
+              <div class="col-6">
+                <div class="border overflow-hidden rounded-2">
+                  <input
+                    id="defaultContent"
+                    name="data-content-width"
+                    type="radio"
+                    value="default"
+                    class="form-check-input"
+                    checked
+                  />
+                  <label
+                    class="form-check-label p-0 avatar-3xl w-100 rounded-2"
+                    for="defaultContent"
+                  >
+                    <img
+                      src="../static/assets/images/switcher/vertical.png"
+                      alt="Vertical"
+                      class="img-fluid"
+                    />
+                  </label>
+                </div>
+                <h5 class="small mt-2 px-2">Default</h5>
+              </div>
+              <div class="col-6">
+                <div class="border overflow-hidden rounded-2">
+                  <input
+                    id="boxLayout"
+                    name="data-content-width"
+                    type="radio"
+                    value="box"
+                    class="form-check-input"
+                  />
+                  <label
+                    class="form-check-label p-0 avatar-3xl w-100 rounded-2"
+                    for="boxLayout"
+                  >
+                    <img
+                      src="../static/assets/images/switcher/box.png"
+                      alt="Box"
+                      class="img-fluid"
+                    />
+                  </label>
+                </div>
+                <h5 class="small mt-2 px-2">Box</h5>
+              </div>
+              <!-- end col -->
+            </div>
+
+            <h6 class="my-5 fw-semibold">Layout Direction:</h6>
+
+            <div class="row gy-3">
+              <div class="col-6">
+                <div class="border overflow-hidden rounded-2">
+                  <input
+                    id="ltrMode"
+                    name="dir"
+                    type="radio"
+                    value="ltr"
+                    class="form-check-input"
+                    checked
+                  />
+                  <label
+                    class="form-check-label p-0 avatar-3xl w-100 rounded-2"
+                    for="ltrMode"
+                  >
+                    <img
+                      src="../static/assets/images/switcher/ltr.png"
+                      alt="LTR"
+                      class="img-fluid"
+                    />
+                  </label>
+                </div>
+                <h5 class="small mt-2 px-2">LTR</h5>
+              </div>
+              <div class="col-6">
+                <div class="border overflow-hidden rounded-2">
+                  <input
+                    id="rtlMode"
+                    name="dir"
+                    type="radio"
+                    value="rtl"
+                    class="form-check-input"
+                  />
+                  <label
+                    class="form-check-label p-0 avatar-3xl w-100 rounded-2"
+                    for="rtlMode"
+                  >
+                    <img
+                      src="../static/assets/images/switcher/rtl.png"
+                      alt="RTL"
+                      class="img-fluid"
+                    />
+                  </label>
+                </div>
+                <h5 class="small mt-2 px-2">RTL</h5>
+              </div>
+              <!-- end col -->
+            </div>
+
+            <h6 class="my-5 fw-semibold">Layout Mode:</h6>
+
+            <div class="row gy-3">
+              <div class="col-6">
+                <div>
+                  <input
+                    id="layout-light"
+                    name="data-bs-theme"
+                    type="radio"
+                    value="light"
+                    class="form-check-input"
+                    checked
+                  />
+                  <label
+                    class="form-check-label p-0 avatar-3xl w-100 rounded-2"
+                    for="layout-light"
+                  >
+                    <img
+                      src="../static/assets/images/switcher/light.png"
+                      alt="Light"
+                      class="img-fluid"
+                    />
+                  </label>
+                </div>
+                <h5 class="small mt-2 px-2">Light</h5>
+              </div>
+              <div class="col-6">
+                <div class="border overflow-hidden rounded-2">
+                  <input
+                    id="layout-dark"
+                    name="data-bs-theme"
+                    type="radio"
+                    value="dark"
+                    class="form-check-input"
+                  />
+                  <label
+                    class="form-check-label p-0 avatar-3xl w-100 rounded-2 bg-dark"
+                    for="layout-dark"
+                  >
+                    <img
+                      src="../static/assets/images/switcher/dark.png"
+                      alt="Dark"
+                      class="img-fluid"
+                    />
+                  </label>
+                </div>
+                <h5 class="small mt-2 px-2">Dark</h5>
+              </div>
+              <div class="col-6">
+                <div class="border overflow-hidden rounded-2">
+                  <input
+                    id="automode"
+                    name="data-bs-theme"
+                    type="radio"
+                    value="auto"
+                    class="form-check-input"
+                  />
+                  <label
+                    class="form-check-label p-0 avatar-3xl w-100 rounded-2"
+                    for="automode"
+                  >
+                    <img
+                      src="../static/assets/images/switcher/system.png"
+                      alt="System"
+                      class="img-fluid"
+                    />
+                  </label>
+                </div>
+                <h5 class="small mt-2 px-2">System</h5>
+              </div>
+              <!-- end col -->
+            </div>
+
+            <h6 class="my-5 fw-semibold">Sidebar Size:</h6>
+
+            <div class="row gy-3">
+              <div class="col-6">
+                <div class="border overflow-hidden rounded-2">
+                  <input
+                    id="sidebar-default"
+                    name="data-sidebar"
+                    type="radio"
+                    value="default"
+                    class="form-check-input"
+                    checked
+                  />
+                  <label
+                    class="form-check-label p-0 avatar-3xl w-100 rounded-2"
+                    for="sidebar-default"
+                  >
+                    <img
+                      src="../static/assets/images/switcher/vertical.png"
+                      alt="Vertical"
+                      class="img-fluid"
+                    />
+                  </label>
+                </div>
+                <h5 class="small mt-2 px-2">Default</h5>
+              </div>
+              <div class="col-6">
+                <div class="border overflow-hidden rounded-2">
+                  <input
+                    id="sidebar-medium"
+                    name="data-sidebar"
+                    type="radio"
+                    value="medium"
+                    class="form-check-input"
+                    checked
+                  />
+                  <label
+                    class="form-check-label p-0 avatar-3xl w-100 rounded-2"
+                    for="sidebar-medium"
+                  >
+                    <img
+                      src="../static/assets/images/switcher/medium.png"
+                      alt="Medium"
+                      class="img-fluid"
+                    />
+                  </label>
+                </div>
+                <h5 class="small mt-2 px-2">Medium</h5>
+              </div>
+              <div class="col-6">
+                <div class="border overflow-hidden rounded-2">
+                  <input
+                    id="sidebar-icon"
+                    name="data-sidebar"
+                    type="radio"
+                    value="icon"
+                    class="form-check-input"
+                  />
+                  <label
+                    class="form-check-label p-0 avatar-3xl w-100 rounded-2"
+                    for="sidebar-icon"
+                  >
+                    <img
+                      src="../static/assets/images/switcher/icon.png"
+                      alt="Icon"
+                      class="img-fluid"
+                    />
+                  </label>
+                </div>
+                <h5 class="small mt-2 px-2">Icon</h5>
+              </div>
+              <div class="col-6">
+                <div class="border overflow-hidden rounded-2">
+                  <input
+                    id="sidebar-icon-hover"
+                    name="data-sidebar"
+                    type="radio"
+                    value="icon-hover"
+                    class="form-check-input"
+                  />
+                  <label
+                    class="form-check-label p-0 avatar-3xl w-100 rounded-2"
+                    for="sidebar-icon-hover"
+                  >
+                    <img
+                      src="../static/assets/images/switcher/icon-hover.png"
+                      alt="Icon Hover"
+                      class="img-fluid"
+                    />
+                  </label>
+                </div>
+                <h5 class="small mt-2 px-2">Icon hover</h5>
+              </div>
+              <!-- end col -->
+            </div>
+
+            <div id="sidebar-color" class="mb-4 sidebar-color-theme">
+              <h6 class="mb-0 mt-5 fw-semibold">Sidebar Color</h6>
+              <p class="text-muted mb-2">Choose a sidebar background color.</p>
+              <div class="d-flex flex-wrap main-sidebar-color gap-2">
+                <div class="form-check sidebar-setting card-radio">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="data-sidebar-color"
+                    id="sidebarColorLight"
+                    value="light"
+                  />
+                  <label
+                    class="form-check-label rounded-3"
+                    for="sidebarColorLight"
+                  ></label>
+                </div>
+                <div class="form-check sidebar-setting card-radio">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="data-sidebar-color"
+                    id="sidebarColorMidnight"
+                    value="dark"
+                  />
+                  <label
+                    class="form-check-label rounded-3"
+                    for="sidebarColorMidnight"
+                  ></label>
+                </div>
+                <div class="form-check sidebar-setting card-radio">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="data-sidebar-color"
+                    id="sidebarColorDark"
+                    value="rosewood"
+                  />
+                  <label
+                    class="form-check-label rounded-3"
+                    for="sidebarColorDark"
+                  ></label>
+                </div>
+                <div class="form-check sidebar-setting card-radio">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="data-sidebar-color"
+                    id="sidebarColorAqua"
+                    value="indigo"
+                  />
+                  <label
+                    class="form-check-label rounded-3"
+                    for="sidebarColorAqua"
+                  ></label>
+                </div>
+              </div>
+            </div>
+            <div id="sidebar-color" class="my-5">
+              <h6 class="mb-0 mt-5 fw-semibold">Primary Color</h6>
+              <p class="text-muted mb-2">Choose a color of Primary.</p>
+              <div class="d-flex flex-wrap main-sidebar-color gap-2">
+                <div class="form-check sidebar-setting card-radio">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="data-theme-colors"
+                    id="themeColor-01"
+                    value="default"
+                    checked
+                  />
+                  <label
+                    class="form-check-label rounded-3"
+                    for="themeColor-01"
+                  ></label>
+                </div>
+                <div class="form-check sidebar-setting card-radio">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="data-theme-colors"
+                    id="themeColor-03"
+                    value="skyblue"
+                  />
+                  <label
+                    class="form-check-label rounded-3"
+                    for="themeColor-03"
+                  ></label>
+                </div>
+                <div class="form-check sidebar-setting card-radio">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="data-theme-colors"
+                    id="themeColor-02"
+                    value="orange"
+                  />
+                  <label
+                    class="form-check-label rounded-3"
+                    for="themeColor-02"
+                  ></label>
+                </div>
+                <div class="form-check sidebar-setting card-radio">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="data-theme-colors"
+                    id="themeColor-04"
+                    value="purple"
+                  />
+                  <label
+                    class="form-check-label rounded-3"
+                    for="themeColor-04"
+                  ></label>
+                </div>
+                <div class="form-check sidebar-setting card-radio">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="data-theme-colors"
+                    id="themeColor-05"
+                    value="green"
+                  />
+                  <label
+                    class="form-check-label rounded-3"
+                    for="themeColor-05"
+                  ></label>
+                </div>
+                <div class="form-check sidebar-setting card-radio">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="data-theme-colors"
+                    id="themeColor-06"
+                    value="pink"
+                  />
+                  <label
+                    class="form-check-label rounded-3"
+                    for="themeColor-06"
+                  ></label>
+                </div>
+                <div class="form-check sidebar-setting card-radio">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="data-theme-colors"
+                    id="themeColor-07"
+                    value="teal"
+                  />
+                  <label
+                    class="form-check-label rounded-3"
+                    for="themeColor-07"
+                  ></label>
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex items-center justify-end gap-2 modal-footer pt-6 border-top"
+            >
+              <button type="button" class="btn btn-light" id="resetBtn">
+                <i class="ri-reset-right-line me-1"></i> Reset
+              </button>
+              <button type="button" class="btn btn-primary">
+                <i class="ri-shopping-bag-3-line me-1"></i> Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Begin scroll top -->
+      <div
+        class="progress-wrap d-flex align-items-center justify-content-center cursor-pointer h-40px w-40px position-fixed"
+        id="progress-scroll"
+      >
+        <svg
+          class="progress-circle w-100 h-100 position-absolute"
+          viewBox="0 0 100 100"
+        >
+          <circle cx="50" cy="50" r="45" class="progress" />
+        </svg>
+        <i
+          class="ri-arrow-up-line fs-16 z-1 position-relative text-primary"
+        ></i>
+      </div>
+      <!-- END scroll top -->
+      <!-- Begin Footer -->
+      <footer class="footer">
+        <div class="container-fluid">
+          <div class="d-flex justify-content-between align-items-center gap-2">
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            © Mirbal.
+            <div class="text-sm-end d-none d-sm-block">
+              Design & Develop by SRBThemes
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- END Footer -->
+    </div>
+    <!-- End Begin page -->
+
+    <!-- Swiper bundle js -->
+    <script src="../static/assets/libs/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Bootstrap bundle js -->
+    <script src="../static/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- simplebar js -->
+    <script src="../static/assets/libs/simplebar/simplebar.min.js"></script>
+
+    <!-- Scroll Top init -->
+    <script src="../static/assets/js/scroll-top.init.js"></script>
+    <!-- App js -->
+    <script src="../static/assets/js/app.js"></script>
+  </body>
+
+  <!-- Mirrored from srbthemes.kcubeinfotech.com/mirbal/html/ltr/ui-card.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 10 Oct 2025 17:03:52 GMT -->
+</html>
